@@ -1,0 +1,14 @@
+<!--components/button-big/index.wxml-->
+<view class="btn-container" style="background-color: {{backgroundColor}};">
+    <view class="title-slot title-css"><slot name="title"></slot></view>
+    <view class="title title-css">默认标题</view>
+    <view class="desc-slot"><slot name="desc"></slot></view>
+    <view class="desc">默认详情</view>
+    <view class="bottom-container">
+        <view class="arrow-container" style="background-color: {{buttonColor}};">
+            <image class="arrow-right" src="../../assets/images/home-index/arrow-right.png" mode="widthFix"></image>
+        </view>
+        <view class="b-r-icon-slot"><slot name="logo"></slot></view>
+        <image src="{{logo}}" mode="widthFix" class="b-r-icon"></image>
+    </view>
+</view>

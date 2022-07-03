@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "button-big":"../../components/button-big/index",
+    "van-overlay": "@vant/weapp/overlay/index"
+  },
+  "navigationBarBackgroundColor": "#4E148C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "万兴转运"
+}   

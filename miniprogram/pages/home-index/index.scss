@@ -1,0 +1,201 @@
+/**index.wxss**/
+// 1.811594202898551
+
+.bg-cover {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+}
+
+// 背景头部
+.bg-header {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #50148a;
+    height: 340rpx;
+
+    .round {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110%;
+        height: 435rpx;
+        background-color: #521488;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+}
+
+
+// 轮播图
+.swiper-list {
+    width: 95%;
+    height: 156px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .image {
+        width: 100%;
+        height: 156px;
+        vertical-align: top;
+    }
+}
+
+// 立即转运
+.transit {
+    width: 588rpx;
+    height: 350rpx;
+    background-color: rgba(255, 255, 255, 100);
+    margin: 40rpx auto 0;
+    border-radius: 14px;
+    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 100);
+
+    .to-from {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 100rpx;
+        font-size: 56rpx;
+        color: #101010;
+
+        .image {
+            width: 84rpx;
+            height: 84rpx;
+        }
+    }
+
+    .button {
+        display: block;
+        margin: 55rpx auto 0;
+        width: 294rpx;
+        height: 69rpx;
+        line-height: 69rpx;
+        background-color: rgba(78, 20, 140, 100);
+        border-radius: 7rpx;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .transit-methods {
+        width: 620rpx;
+        height: 285px;
+        background-color: #fff;
+    }
+}
+
+
+// 客服
+.custom_service {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96%;
+    height: 91rpx;
+    margin: 26rpx auto 0;
+    background-color: #ff6600;
+    border-radius: 50rpx;
+
+    .image {
+        width: 98rpx;
+        height: 98rpx;
+        transform: translateX(-3rpx);
+    }
+
+    .text-content {
+        flex: 1;
+        padding-left: 20rpx;
+
+        .text-top {
+            color: rgba(247, 246, 246, 100);
+            font-size: 16px;
+        }
+
+        .text-bottom {
+            color: rgba(226, 226, 226, 100);
+            font-size: 12px;
+        }
+
+    }
+
+    .arrow-right {
+        width: 49rpx;
+        height: 49rpx;
+        margin-right: 20rpx;
+    }
+}
+
+// 须知和估算
+.xuzhi-gusuan {
+    display: flex;
+    padding: 0 35rpx;
+    justify-content: space-between;
+    margin-top: 30rpx;
+
+    .jisuanji {
+        width: 120rpx;
+        height: 120rpx;
+        transform: translateY(20rpx);
+    }
+}
+
+// 转运流程
+.liucheng {
+    padding: 0 35rpx;
+    color: rgba(0, 0, 0, 1);
+    font-size: 50rpx;
+    line-height: 90rpx;
+    font-weight: 600;
+    margin-top: 55rpx;
+
+    .image {
+        width: 100vw;
+        margin-left: -35rpx;
+    }
+}
+
+.copy-location {
+
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 6rpx;
+        width: 80%;
+        height: 73rpx;
+        margin: 0 auto;
+        border-radius: 19px;
+        background-color: #4e168c;
+        color: rgba(255, 255, 255, 100);
+
+        .copy {
+            width: 34rpx;
+            height: 34rpx;
+        }
+    }
+
+    .tip {
+        text-align: center;
+        color: rgba(76, 22, 142, 100);
+        font-size: 26rpx;
+        margin-top: 18rpx;
+        height: 120rpx;
+    }
+}
