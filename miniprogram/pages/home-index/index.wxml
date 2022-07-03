@@ -30,13 +30,24 @@
         <view class="from">美国</view>
     </view>
     <view class="button" bindtap="handleGoTransitClick">立即转运</view>
-    <van-overlay show="{{ showRransit }}" bind:click="onClickHide" custom-style="background-color: rgba(0, 0, 0, 0.4);">
+    <van-popup show="{{ showRransit }}" catchtouchmove="moveHandle" bind:click-overlay="onClickHide">
         <view class="wrapper" >
             <view class="transit-methods">
-
+                <view class="title">预选渠道</view>
+                <view class="btn-list">
+                    <view class="btn btn-active">普通货物</view>
+                    <view class="btn">普通货物</view>
+                    <view class="btn">普通货物</view>
+                    <view class="btn">普通货物</view>
+                    <view class="btn">普通货物</view>
+                </view>
+                <view class="operate">
+                    <view class="cancel btn" bindtap="onClickHide">取消</view>
+                    <view class="nextStep btn">下一步</view>
+                </view>
             </view>
         </view>
-    </van-overlay>
+    </van-popup>
 </view>
 
 <!-- 客服 -->
@@ -73,7 +84,7 @@
 
 <!-- 复制地址 -->
 <view class="copy-location">
-    <view class="btn">
+    <view class="btn" bindtap="handleCopyLocationClick">
         <image class="copy" src="../../assets/images/home-index/copy.png" mode="widthFix"></image>
         <text class="text">复制仓库地址去购物</text>
     </view>

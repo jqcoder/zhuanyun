@@ -20,7 +20,17 @@ Page({
     this.setData({
         showRransit: false
     })
-    
+  },
+
+  handleCopyLocationClick(){
+      wx.navigateTo({
+          url: "/pages/copyLocation/index"
+      })
+  },
+
+    // 开启遮罩层后阻止背景滑动      
+  moveHandle(){
+
   }
 
 })

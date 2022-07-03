@@ -97,6 +97,57 @@
         width: 620rpx;
         height: 285px;
         background-color: #fff;
+        border-radius: 8rpx 8rpx 8rpx 8rpx;
+        padding: 0 50rpx;
+        box-sizing: border-box;
+
+        .title {
+            text-align: center;
+            font-size: 36rpx;
+            margin-top: 20rpx;
+        }
+
+        .btn-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+            .btn {
+                width: 228rpx;
+                height: 96rpx;
+                line-height: 96rpx;
+                color: #4C168E;
+                border-radius: 7px;
+                border: 1px solid rgba(187, 187, 187, 100);
+                text-align: center;
+                margin: 15rpx 0;
+            }
+
+            .btn-active{
+                background-color: rgba(76, 22, 142, 100);
+                color: rgba(247, 246, 246, 100);
+            }
+        }
+
+        .operate{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 36rpx;
+
+            .btn{
+                width: 228rpx;
+                height: 96rpx;
+                line-height: 96rpx;
+                text-align: center;
+            }
+
+            .nextStep{
+                color: #02BB00;
+            }
+        }
+
     }
 }
 

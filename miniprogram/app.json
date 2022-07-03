@@ -3,7 +3,8 @@
         "pages/home-index/index",
         "pages/home-coupon/index",
         "pages/home-order/index",
-        "pages/home-user/index"
+        "pages/home-user/index",
+        "pages/copyLocation/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -13,7 +14,7 @@
     },
     "sitemapLocation": "sitemap.json",
     "tabBar": {
-        "selectedColor": "#4C168E",    
+        "selectedColor": "#4C168E",
         "list": [
             {
                 "pagePath": "pages/home-index/index",

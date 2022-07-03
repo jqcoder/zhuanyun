@@ -1,0 +1,41 @@
+<!--pages/copyLocation/index.wxml-->
+<view class="page">
+    <view class="location-container">
+        <view class="title">
+            <view class="icon-container flex-c-c">
+                <image class="location-icon" src="../../assets/images/location.png"></image>
+            </view>
+            <text>仓库地址</text>
+        </view>
+        <view class="consignee line">
+            <view class="line-header"><text>收货人：</text></view>
+            <view class="desc">万兴仓库</view>
+        </view>
+        <view class="consignee line">
+            <view class="line-header"><text>收货地址：</text></view>
+            <view class="desc">万兴仓库万兴仓库万兴仓库万兴仓库万兴仓库万兴仓库万兴仓库库万兴仓库库万兴仓库</view>
+        </view>
+        <view class="consignee line">
+            <view class="line-header"><text>联系电话：</text></view>
+            <view class="desc">15354564564</view>
+        </view>
+        <view class="consignee line">
+            <view class="line-header"><text>邮政编码：</text></view>
+            <view class="desc">321654</view>
+        </view>
+    </view>
+
+    <view class="copyContainer">
+        <van-button round type="info" bind:click="handleCopyLocationClick" block>一键复制仓库地址信息</van-button>
+    </view>
+
+    <view class="step">
+        <block wx:for="{{stepInfo}}" wx:key="title">
+            <view class="line">
+            <view class="title">{{item.title}}</view>
+            <view class="content">{{item.content}}</view>
+        </view>
+        </block>
+    </view>
+</view>
+

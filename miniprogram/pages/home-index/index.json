@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "button-big":"../../components/button-big/index",
-    "van-overlay": "@vant/weapp/overlay/index"
+    "van-popup": "@vant/weapp/popup/index"
   },
   "navigationBarBackgroundColor": "#4E148C",
   "navigationBarTextStyle": "white",
