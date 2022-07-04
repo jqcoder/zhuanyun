@@ -29,9 +29,9 @@ Page({
 
     },
 
-    handleCopyLocationClick(){
-              wx.setClipboardData({
-          data: '物流仓库地址',  
-      })
+    handleCopyLocationClick() {
+        wx.setClipboardData({
+            data: '物流仓库地址',
+        })
     }
 })

@@ -1,0 +1,74 @@
+/* components/address-item/index.wxss */
+.info {
+    display: flex;
+    align-items: center;
+
+    .name-box {
+        width: 64rpx;
+        height: 64rpx;
+        line-height: 64rpx;
+        margin-right: 22rpx;
+        color: #fff;
+        background-color: #FFA726;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .detail {
+        flex: 1;
+
+        .header {
+            display: flex;
+            font-size: 30rpx;
+            line-height: 42rpx;
+
+            .name {
+                margin-right: 50rpx;
+            }
+        }
+
+        .foot {
+            color: rgba(153, 153, 153, 100);
+            font-size: 24rpx;
+            line-height: 50rpx;
+            padding-right: 20rpx;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+}
+
+.operate{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32rpx;
+    .dafault-left{
+        display: flex;
+        align-items: center;
+        column-gap: 10rpx;
+        font-size: 28rpx;
+        color: #E7691D;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        font-size: 28rpx;
+        .round{
+            width: 30rpx;
+            height: 30rpx;
+            border-radius: 50%;
+            border: 1px solid rgba(153, 153, 153, 100);
+            margin-right: 15rpx;
+        }
+    }
+
+    .right{
+        display: flex;
+        column-gap: 20rpx;
+    }
+}

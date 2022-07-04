@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "my-empty": "../../components/my-empty/index",
+        "van-button": "@vant/weapp/button/index",
+        "address-item": "../../components/address-item/index"
+    },
+    "navigationBarBackgroundColor": "#E7691D",
+    "navigationBarTitleText": "万兴转运"
+}

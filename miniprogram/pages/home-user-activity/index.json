@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "my-empty": "../../components/my-empty/index"
+    }
+}

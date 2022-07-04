@@ -1,2 +1,45 @@
 <!--pages/home-user/index.wxml-->
-<text>pages/home-user/index.wxml</text>
+<view class="userInfo">
+    <image class="userpic" mode="widthFix" src="../../assets/images/touxiang.png"></image>
+    <view class="info">
+        <view class="user-name">kkk</view>
+        <view class="user-num">编码： hksk</view>
+    </view>
+</view>
+
+<view class="page">
+    <!-- 我的订单 -->
+    <view class="my-order">
+        <van-cell title="我的订单" is-link value="全部订单" />
+
+        <view class="order-btnList">
+            <view class="btn-item">
+                <van-icon size="56rpx" color="#4399ea" name="../../../../assets/images/user-icon.png" />
+                <view>待付款</view>
+            </view>
+            <view class="btn-item">
+                <van-icon size="56rpx" color="#4399ea" name="../../../../assets/images/user-icon2.png" />
+                <view>待发货</view>
+            </view>
+            <view class="btn-item">
+                <van-icon size="56rpx" color="#4399ea" name="../../../../assets/images/user-icon3.png" />
+                <view>待收货</view>
+            </view>
+            <view class="btn-item">
+                <van-icon size="56rpx" color="#4399ea" name="flower-o" />
+                <view>待评价</view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 菜单 -->
+    <view class="menu-list">
+        <van-cell title="我的地址" url="/pages/home-user-address/index" is-link />
+        <van-cell title="我的优惠卷" url="/pages/home-user-activity/index" is-link />
+        <van-cell title="活动中心" is-link />
+        <van-cell title="联系客服" is-link />
+        <van-cell title="转运流程" is-link />
+        <van-cell title="转运须知" is-link />
+        <van-cell title="关于我们" is-link />
+    </view>
+</view>

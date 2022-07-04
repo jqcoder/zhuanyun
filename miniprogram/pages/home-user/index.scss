@@ -1,1 +1,95 @@
 /* pages/home-user/index.wxss */
+// 用户信息
+.userInfo{
+    display: flex;
+    align-items: center;
+    height: 224rpx;
+    padding-left: 48rpx;
+    background-color: #e36a26;
+
+    .userpic{
+        width: 140rpx;
+        height: 140rpx;
+        border-radius: 50%;
+    }
+
+    .info{
+        margin-left: 52rpx;
+        color: rgba(255, 255, 255, 100);
+
+        .user-name{
+            font-size: 48rpx;
+        }
+
+        .user-num{
+            font-size: 28rpx;
+            margin-top: 25rpx;
+        }
+    }
+}
+
+// 页面全局
+.page{
+    padding: 0 20rpx;
+}
+
+// 我的订单
+.my-order{
+    height: 264rpx;
+    padding: 5rpx 18rpx 0;
+    margin-top: 32rpx;
+    box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255, 100);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 100);
+
+    .custom-class{
+        padding: 0 10rpx !important;
+    }
+
+    .order-btnList{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30rpx;
+
+        .btn-item{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24rpx;
+            color: rgba(26, 26, 26, 100);
+
+            &::after{
+                content: '';
+                position: absolute;
+                right: -52rpx;
+                height: 46rpx;
+                width: 1px;
+                border-right: 1px solid rgba(223, 223, 223, 100);
+            }
+
+            &:last-of-type::after{
+                content: '';
+                border-right: 0;
+            }
+
+            .image{
+                width: 56rpx;
+                height: 56rpx;
+            }
+        }
+    }
+}
+
+.menu-list{
+    margin-top: 28rpx;
+    padding-bottom: 20rpx;
+    overflow: hidden;
+    border-radius: 11px 11px 11px 11px;
+    background-color: rgba(255, 255, 255, 100);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 100);
+}

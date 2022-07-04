@@ -1,0 +1,15 @@
+/* components/my-empty/index.wxss */
+.empty {
+    position: relative;
+    text-align: center;
+
+    .text {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50rpx;
+        color: #686868;
+        font-size: 28rpx;
+    }
+}

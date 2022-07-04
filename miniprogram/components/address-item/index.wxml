@@ -1,0 +1,35 @@
+<!--components/address-item/index.wxml-->
+<view class="address-item">
+    <view class="info">
+        <view class="name-box">
+            <text>{{addressInfo.headName}}</text>
+        </view>
+        <view class="detail">
+            <view class="header">
+                <view class="name">{{addressInfo.name}}</view>
+                <view class="tel">{{addressInfo.tel}}</view>
+            </view>
+            <view class="foot">
+                <text>{{addressInfo.address}}</text> 
+            </view>
+        </view>
+    </view>
+    <view class="operate">
+        <block wx:if="{{isDefault}}">
+            <view class="dafault-left">
+                <van-icon size="32rpx" color="#E7691D" name="passed" />
+                <text class="default">默认寄件地址</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="left">
+                <view class="round"></view>
+                <text class="default">设为默认寄件地址</text>
+            </view>
+        </block>
+        <view class="right">
+            <van-icon color="#b2b2b2" size="38rpx" name="edit" />
+            <van-icon color="#b2b2b2" size="38rpx" name="delete-o" />
+        </view>
+    </view>
+</view>

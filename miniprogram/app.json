@@ -4,7 +4,9 @@
         "pages/home-coupon/index",
         "pages/home-order/index",
         "pages/home-user/index",
-        "pages/copyLocation/index"
+        "pages/copyLocation/index",
+        "pages/home-user-activity/index",
+        "pages/home-user-address/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

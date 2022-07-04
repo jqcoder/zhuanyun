@@ -35,11 +35,9 @@
             <view class="transit-methods">
                 <view class="title">预选渠道</view>
                 <view class="btn-list">
-                    <view class="btn btn-active">普通货物</view>
-                    <view class="btn">普通货物</view>
-                    <view class="btn">普通货物</view>
-                    <view class="btn">普通货物</view>
-                    <view class="btn">普通货物</view>
+                    <block wx:for="{{transitInfo}}" wx:key="id">
+                        <view bindtap="handleTransitBtnClick" data-index="{{index}}" class="btn {{active === index ? 'btn-active': ''}} ">普通货物</view>
+                    </block>
                 </view>
                 <view class="operate">
                     <view class="cancel btn" bindtap="onClickHide">取消</view>

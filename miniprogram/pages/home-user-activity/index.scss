@@ -1,0 +1,15 @@
+/* pages/home-order-activity/index.wxss */
+
+.no-activity {
+    position: relative;
+    text-align: center;
+
+    .text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50rpx;
+        color: #686868;
+        font-size: 28rpx;
+    }
+}
