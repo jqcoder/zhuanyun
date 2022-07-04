@@ -1,7 +1,11 @@
 // pages/home-user-address/index.ts
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+
 Page({
     data: {
-        addressList:[{
+        addressList:[
+            {
+            id: 1,
             name:'小郑',
             headName: '小',
             tel: '13066664444',
@@ -9,15 +13,48 @@ Page({
             isDefault: 1
         },
         {
+            id: 2,
             name:'杰杰杰',
             headName: '杰',
             tel: '13066663333',
             address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA',
             isDefault: 0
-        }]
+        }
+    ]
     },
 
     onLoad() {
 
     },
+
+    // 添加地址点击
+    handleAddAddressClick(){
+        wx.navigateTo({
+            url: '/pages/home-user-address-add/index'
+        })
+    },
+
+    // 监听设为默认按钮
+    listenSetDefaultClick(e: any){
+        let addressInfo = e.detail
+        Dialog.confirm({
+            message: '确认设为默认地址吗？',
+        }).then((res)=>{
+            console.log(e);
+        }).catch((err: any)=>{})
+    },
+
+    listenDeleteClick(e:any){
+        let addressId = e.detail
+        Dialog.confirm({
+            message: '确认删除改地址吗？',
+        }).then((res)=>{
+            console.log(e);
+        }).catch((err: any)=>{})
+        
+        // console.log(addressInfo);
+        
+    }
+
+    
 })

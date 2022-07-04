@@ -1,0 +1,9 @@
+/* components/country-list/index.wxss */
+.country-item{
+    display: flex;
+    margin: 0 45rpx;
+    justify-content: space-between;
+    line-height: 110rpx;
+    font-size: 28rpx;
+    border-bottom: 1px solid #e9e9e9;
+}

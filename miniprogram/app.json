@@ -6,7 +6,9 @@
         "pages/home-user/index",
         "pages/copyLocation/index",
         "pages/home-user-activity/index",
-        "pages/home-user-address/index"
+        "pages/home-user-address/index",
+        "pages/home-user-address-add/index",
+        "pages/home-index-selectCountry/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

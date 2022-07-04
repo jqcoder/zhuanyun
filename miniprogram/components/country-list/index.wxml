@@ -1,0 +1,10 @@
+<!--components/country-list/index.wxml-->
+<block wx:for="{{ countryInfo}}" wx:key="index">
+    <van-index-anchor index="{{index}}" />
+    <block wx:for="{{item}}" wx:key="countryCName">
+        <view class="country-item">
+            <text>{{item.countryCName}}</text>
+            <text>{{item.countryEName}}</text>
+        </view>
+    </block>
+</block>

@@ -1,0 +1,55 @@
+<!--pages/home-index-selectCountry/index.wxml-->
+<!-- 搜索区 -->
+<view class="search">
+    <van-search value="{{ searchVal }}" placeholder="选择国家或地区" use-left-icon-slot background="#fff" bind:change="debounce_listenSearchValChange">
+        <view slot="left-icon" class="left-icon">
+            <van-icon size="50rpx" name="search" />
+        </view>
+    </van-search>
+</view>
+
+<!-- 地址列表 -->
+<view class="countryList">
+    <van-index-bar index-list="{{ indexList }}">
+        <!-- <block wx:if="{{!issearchResult}}">
+            <block wx:for="{{ countryInfo}}" wx:key="index">
+                <van-index-anchor index="{{index}}" />
+                <block wx:for="{{item}}" wx:key="countryCName">
+                    <view class="country-item">
+                        <text>{{item.countryCName}}</text>
+                        <text>{{item.countryEName}}</text>
+                    </view>
+                </block>
+            </block>
+        </block>
+        <block wx:else>
+            <block wx:for="{{ searchResult}}" wx:key="index">
+                <van-index-anchor index="{{index}}" />
+                <block wx:for="{{item}}" wx:key="countryCName">
+                    <view class="country-item">
+                        <text>{{item.countryCName}}</text>
+                        <text>{{item.countryEName}}</text>
+                    </view>
+                </block>
+            </block>
+        </block> -->
+
+        <van-index-bar index-list="{{ indexList }}">
+            <block wx:if="{{!issearchResult}}">
+                <country-list countryInfo="{{countryInfo}}"></country-list>
+            </block>
+            <block wx:else>
+                <country-list countryInfo="{{searchResult}}"></country-list>
+            </block>
+        </van-index-bar>
+    </van-index-bar>
+</view>
+
+<!-- <van-index-bar index-list="{{ indexList }}">
+        <block wx:if="{{!issearchResult}}">
+            <country-list countryInfo="{{countryInfo}}"></country-list>
+        </block>
+        <block wx:else>
+            <country-list countryInfo="{{searchResult}}"></country-list>
+        </block>
+    </van-index-bar> -->

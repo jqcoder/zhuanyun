@@ -1,0 +1,40 @@
+/* pages/home-user-address-add/index.wxss */
+.Addressform{
+    padding: 0 30rpx 0 12rpx;
+
+    .line-ipt{
+        display: flex;
+        align-items: center;
+        font-size: 28rpx;
+
+        .label{
+            width: 156rpx;
+            text-align: right;
+        }
+
+        .ipt{
+            flex: 1;
+        }
+    }
+
+    .line-ipt-country{
+        justify-content: space-between;
+
+        .openSelectCountry{
+            display: flex;
+            align-items: center;
+            .text{
+                color: rgba(214, 211, 211);
+            }
+            .icon{
+                transform: translateY(2rpx);
+            }
+        }
+    }
+
+    .line-ipt:last-of-type{
+        padding-bottom: 20rpx;
+        border-bottom: 1px solid #bbb;
+    }
+
+}

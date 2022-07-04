@@ -22,14 +22,14 @@
             </view>
         </block>
         <block wx:else>
-            <view class="left">
+            <view class="left" bindtap="handleDefaultAddressClick">
                 <view class="round"></view>
                 <text class="default">设为默认寄件地址</text>
             </view>
         </block>
         <view class="right">
             <van-icon color="#b2b2b2" size="38rpx" name="edit" />
-            <van-icon color="#b2b2b2" size="38rpx" name="delete-o" />
+            <van-icon bind:click="handleDeleteClick" data-id="{{addressInfo.id}}" color="#b2b2b2" size="38rpx" name="delete-o" />
         </view>
     </view>
 </view>

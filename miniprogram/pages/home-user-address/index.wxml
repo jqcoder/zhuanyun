@@ -2,13 +2,19 @@
 <block wx:if="{{!addressList.length}}">
     <view class="empty">
         <my-empty text="亲，你还没有添加地址信息喔~"></my-empty>
-        <van-button color="#e36a26" custom-style="width:352rpx; height: 72rpx">添加地址</van-button>
+        <van-button color="#e36a26" custom-style="width:352rpx; height: 72rpx" bindtap="handleAddAddressClick">添加地址</van-button>
     </view>
 </block>
 <block wx:else>
     <view class="page">
-        <block wx:for="{{addressList}}" wx:key="tel">
-            <address-item isDefault="{{item.isDefault}}" addressInfo="{{item}}"></address-item>
+        <block wx:for="{{addressList}}" wx:key="id">
+            <address-item isDefault="{{item.isDefault}}"
+                        addressInfo="{{item}}"
+                        bind:setDefaultAddress="listenSetDefaultClick"
+                        bind:deleteAddress="listenDeleteClick">
+            </address-item>
         </block>
     </view>
 </block>
+
+<van-dialog id="van-dialog" />

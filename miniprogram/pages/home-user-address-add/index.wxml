@@ -1,0 +1,37 @@
+<!--pages/home-user-address-add/index.wxml-->
+<view class="Addressform">
+    <view class="line-ipt">
+        <text class="label">Name：</text>
+        <van-field value="{{name }}" class="ipt" placeholder="Please fill in the recipient's name" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">Phone：</text>
+        <van-field value="{{phone }}" class="ipt" placeholder="Please fill in the recipient's phone" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">Address：</text>
+        <van-field value="{{address }}" class="ipt" placeholder="Please fill in the address" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">City：</text>
+        <van-field value="{{city }}" class="ipt" placeholder="Please fill in the city" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">PostCode：</text>
+        <van-field value="{{postcode }}" class="ipt" placeholder="Please fill in the postcode" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt  line-ipt-country">
+        <text class="label">Country：</text>
+        <view class="openSelectCountry">
+            <text class="text">Please select a country</text>
+            <van-icon class="icon" name="arrow" color="#bbbbbb" />
+        </view>
+    </view>
+
+    <!-- 是否设置为默认 -->
+    <van-cell title="设为默认" border="{{false}}" >
+        <view slot="right-icon">
+            <van-switch checked="{{ isDefault }}" bind:change="handleSwitchClick"  active-color="#20e26c" />
+        </view>
+    </van-cell>
+</view>

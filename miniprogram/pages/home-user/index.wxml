@@ -2,8 +2,8 @@
 <view class="userInfo">
     <image class="userpic" mode="widthFix" src="../../assets/images/touxiang.png"></image>
     <view class="info">
-        <view class="user-name">kkk</view>
-        <view class="user-num">编码： hksk</view>
+        <view class="user-name">{{username}}</view>
+        <view class="user-num">编码： {{userNum}}</view>
     </view>
 </view>
 
