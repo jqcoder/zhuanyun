@@ -1,0 +1,96 @@
+/* components/coupon-item/index.wxss */
+.coupon{
+    display: flex;
+    height: 200rpx;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 0px rgba(255, 247, 230, 100);
+
+    .left{
+        position: relative;
+        width: 268rpx;
+
+        .bg-cover{
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #fff;
+            transform: translateY(-10rpx);
+            .top{
+                .num{
+                    font-size: 96rpx;
+                    color: #fff;
+                }
+    
+                .type{
+                    display: inline-block;
+                    font-size: 40rpx;
+                    margin-left: 10rpx;
+                    transform: translateY(-3rpx);
+                }
+            }
+
+            
+        }
+    }
+    .right{
+        flex: 1;
+        position: relative;
+
+        .bg-right-top{
+            position: absolute;
+            width: 115rpx;
+            right: 0;
+            top: 0;
+        }
+
+        .bg-right-top-text{
+            position: absolute;
+            right: 6rpx;    
+            top: 30rpx;
+            transform: rotate(45deg);
+            color: #fff;
+            font-size: 24rpx;
+        }
+
+        .bg-use-img{
+            position: absolute;
+            right: 40rpx;
+            bottom: 2rpx;
+            width: 160rpx;
+            height: 160rpx;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            row-gap: 20rpx;
+            padding-left: 30rpx;
+
+            .name{
+                color: rgba(90, 90, 90, 100);
+                font-size: 36rpx;
+                font-weight: 700;
+            }
+
+            .time{
+                font-size: 28rpx;
+                color: rgba(191, 191, 191, 100);
+            }
+        }
+    }
+    
+}

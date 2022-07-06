@@ -1,6 +1,8 @@
 // pages/home-index-writeAddress/index.ts
 Page({
     data: {
+        addressID: 0,
+
         name: '',
         phone: '',
         address: '',

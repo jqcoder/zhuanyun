@@ -1,0 +1,95 @@
+/* pages/subPages/coupon-detail/index.wxss */
+.coupon {
+    display: flex;
+    width: 710rpx;
+    margin: 0 auto;
+    border-bottom: 1px dashed #eac3c3;
+    margin-top: 40rpx;
+
+    .left {
+        padding: 20rpx 40rpx;
+        box-sizing: border-box;
+        border-right: 1px dashed #eac3c3;
+
+        .header{
+            .fuhao{
+                font-size: 24rpx;
+            }
+
+            .number{
+                font-weight: 700;
+                font-size: 80rpx;
+            }
+        }
+        .bottom{
+            font-size: 24rpx;
+        }
+    }
+
+    .rigth{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 10rpx;
+        padding:  20rpx 30rpx 0;
+
+        .header{
+            display: flex;
+            align-items: center;
+            column-gap: 10rpx;
+            font-size: 26rpx;
+
+            .type{
+                height: 30rpx;
+                line-height: 30rpx;
+                padding: 0 5rpx;
+                background-color: #F6390D;
+                color: #fff;
+                font-size: 24rpx;
+            }
+        }
+
+        .bottom{
+            display: flex;
+            align-items: center;
+            column-gap: 15rpx;
+            font-size: 24rpx;
+
+            .surplus{
+                color: #F6390D;
+            }
+
+            .btn{   
+                width: 128rpx;
+                height: 48rpx;
+                line-height: 48rpx;
+                text-align: center;
+                border-radius: 34rpx;
+                background-color: rgba(246, 57, 13, 100);
+                color: #fff;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.more{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    line-height: 50rpx;
+    padding: 0 68rpx;
+}
+
+.notice{
+    padding: 0 52rpx;
+    font-size: 28rpx;
+    .title{
+        font-size: 40rpx;
+    }
+
+    .line{
+        margin:  50rpx 0;
+        line-height: 50rpx;
+    }
+}

@@ -1,0 +1,86 @@
+/* components/order-item/index.wxss */
+.order-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 326rpx;
+    padding: 24rpx 24rpx 20rpx 24rpx;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 100);
+
+    .header {
+        display: flex;
+        font-size: 28rpx;
+
+        .copy {
+            margin-left: 20rpx;
+            border-radius: 8rpx;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0 5rpx;
+            background-color: rgba(217, 241, 221, 100);
+            color: rgba(64, 184, 80, 100);
+            font-size: 22rpx;
+            border: 1px solid rgba(217, 241, 221, 100);
+        }
+    }
+
+    .to-from {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 36rpx;
+        padding: 0 50rpx;
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #4C168E;
+            font-size: 28rpx;
+            font-weight: 700;
+
+            .image {
+                width: 64rpx;
+                height: 64rpx;
+            }
+        }
+    }
+
+    .btn-list {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 24rpx;
+
+        .btn {
+            width: 160rpx;
+            height: 60rpx;
+            line-height: 60rpx;
+            text-align: center;
+            border-radius: 8rpx;
+            box-sizing: border-box;
+        }
+
+        .yesBale {
+            color: rgba(236, 6, 6, 100);
+            border: 1px solid rgba(236, 6, 6, 100);
+        }
+
+        .detail {
+            background-color: rgba(76, 22, 142, 100);
+            color: rgba(255, 255, 255, 100);
+        }
+
+        .logistics-detail {
+            color: rgba(236, 6, 6, 100);
+            border: 1px solid rgba(236, 6, 6, 100);
+        }
+
+        .goPay {
+            color: #19ac33;
+            border: 1px solid #19ac33;
+        }
+    }
+}

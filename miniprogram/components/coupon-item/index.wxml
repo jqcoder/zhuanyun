@@ -1,0 +1,36 @@
+<!--components/coupon-item/index.wxml-->
+<view class="coupon">
+    <view class="left">
+        <block wx:if="{{isUse}}">
+            <image class="bg-cover"  mode="widthFix" src="../../assets/images/youhuileft3.png"></image>
+        </block>
+        <block wx:elif="{{isexpire}}">
+            <image class="bg-cover"  mode="widthFix" src="../../assets/images/youhuileft2.png"></image>
+        </block>
+        <block wx:else>
+            <image class="bg-cover" mode="widthFix" src="../../assets/images/youhuileft1.png"></image>
+        </block>
+        <view class="content">
+            <view class="top">
+                <text class="num">15</text><text class="type">元</text>
+                <!-- <text class="num">{{}}</text><text class="type">{{}}</text> -->
+            </view>
+            <view class="bottom">满100元使用</view>
+            <!-- <view class="bottom">满{{}}元使用</view> -->
+        </view>
+    </view>
+    <view class="right">
+        <image class="bg-right-top" src="../../assets/images/jiao.png" mode="widthFix"></image>
+        <view class="bg-right-top-text">折扣券</view>
+        <block wx:if="{{isUse}}">
+            <image src="../../assets/images/use.png" mode="widthFix" class="bg-use-img"></image>
+        </block>
+        <block wx:elif="{{isexpire}}">
+            <image src="../../assets/images/useguoqi.png" mode="widthFix" class="bg-use-img"></image>
+        </block>
+        <view class="content">
+            <view class="name">新品优惠券</view>
+            <view class="time">2020.10.10 - 2020.11.11</view>
+        </view>
+    </view>
+</view>

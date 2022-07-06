@@ -44,7 +44,6 @@ Page({
             that.SetDefaultClick(id)
         }).catch((err: any) => { })
     },
-
     SetDefaultClick(id) {
         let index = this.data.addressList.findIndex((item: any) => {
             return item.id === id
@@ -63,8 +62,6 @@ Page({
 
     },
 
-
-
     listenDeleteClick(e: any) {
         let addressId = e.detail
         Dialog.confirm({
@@ -72,10 +69,21 @@ Page({
         }).then((res) => {
             console.log(e);
         }).catch((err: any) => { })
+    },
 
-        // console.log(addressInfo);
+    handleInfoclick(e: any){
+        let lastPage = getCurrentPages()[getCurrentPages().length-2]
+        // 判断上一层一面是哪个
+        if(lastPage.route === 'pages/home-index-writeAddress/index'){
+            let addressId = e.detail
+            lastPage.setData({
+                addressID: addressId
+            })
+            wx.navigateBack({
+                delta: 1
+            })
+        }
 
     }
-
 
 })

@@ -1,0 +1,34 @@
+<!--components/address-card/index.wxml-->
+<view class="address">
+    <block wx:if="{{isShowStore}}">
+        <view class="address-item">
+            <view class="icon-left">
+                <van-icon color="#fff" name="location-o" />
+            </view>
+            <view class="addressInfo">
+                <view class="header">
+                    <view class="name">{{store.name}}</view>
+                    <view>{{store.name}}</view>
+                    <view class="copy" bindtap="handleCopyClick">复制</view>
+                </view>
+                <view class="addressDetail">
+                    <text>{{store.address}}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="address-item">
+        <view class="icon-left two" style="background-color: {{destinationIconBgc}};">
+            <image class="icon" mode="widthFix" src="../../assets/images/cityicon.png"></image>
+        </view>
+        <view class="addressInfo">
+            <view class="header">
+                <view class="name">{{destination.name}}</view>
+                <view>{{destination.tel}}</view>
+            </view>
+            <view class="addressDetail">
+                <text>{{destination.address}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -67,6 +67,18 @@ Page({
         })
     },
 
+    handleGusuanClick(){
+        wx.navigateTo({
+            url: '/pages/subPages/estimate-fare/index'
+        })
+    },
+
+    handleXuZhiClick(){
+        wx.navigateTo({
+            url: '/pages/subPages/home-user-instructions/index'
+        })
+    },
+
     // to复制仓库地址
     handleCopyLocationClick() {
         wx.navigateTo({

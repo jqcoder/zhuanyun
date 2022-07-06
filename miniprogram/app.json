@@ -11,7 +11,12 @@
         "pages/home-index-selectCountry/index",
         "pages/home-index-writeAddress/index",
         "pages/subPages/agreement/index",
-        "pages/subPages/awaitWriteOrder/index"
+        "pages/subPages/awaitWriteOrder/index",
+        "pages/subPages/estimate-fare/index",
+        "pages/subPages/coupon-detail/index",
+        "pages/subPages/home-user-mycoupon/index",
+        "pages/subPages/home-user-instructions/index",
+        "pages/subPages/home-user-flowPath/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -22,7 +27,8 @@
     "sitemapLocation": "sitemap.json",
     "tabBar": {
         "selectedColor": "#4C168E",
-        "list": [{
+        "list": [
+            {
                 "pagePath": "pages/home-index/index",
                 "text": "首页",
                 "iconPath": "./assets/images/tabbar/home.png",

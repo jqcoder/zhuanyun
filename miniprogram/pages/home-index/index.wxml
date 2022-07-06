@@ -52,7 +52,7 @@
 <view class="custom_service">
     <image src="../../assets/images/home-index/kefu.png" mode="widthFix" class="image"></image>
     <view class="text-content">
-        <view class="text-top">联系河马</view>
+        <view class="text-top">联系万兴</view>
         <view class="text-bottom">为你解决下单疑问？</view>
     </view>
     <image mode="widthFix" src="../../assets/images/home-index/arrow-right.png" class="arrow-right"></image>
@@ -60,12 +60,12 @@
 
 <!-- 转运、估算 -->
 <view class="xuzhi-gusuan">
-    <button-big backgroundColor="#4e148c5b" buttonColor="#4E148C" logo="../../assets/images/home-index/car.png">
+    <button-big bindtap="handleXuZhiClick" backgroundColor="#4e148c5b" buttonColor="#4E148C" logo="../../assets/images/home-index/car.png">
         <view slot="title">转运须知</view>
         <view slot="desc">流程和注意事项</view>
     </button-big>
 
-    <button-big backgroundColor="#ff6600b0" buttonColor="#FF6200" logo="../../assets/images/home-index/jisuanji.png">
+    <button-big bindtap="handleGusuanClick" backgroundColor="#ff6600b0" buttonColor="#FF6200" logo="../../assets/images/home-index/jisuanji.png">
         <view slot="title">运费估算</view>
         <view slot="desc">费用心中有数</view>
         <view slot="logo">

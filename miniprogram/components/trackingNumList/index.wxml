@@ -1,0 +1,32 @@
+<!--components/trackingNumList/index.wxml-->
+<view class="form">
+        <view class="tip">
+            <van-icon size="26rpx" color="#E7691D" name="warning-o" /><text class="text">快递全部到齐点击确认打包后，订单不可修改</text>
+        </view>
+        <view class="form-content">
+            <view class="num">
+                <view class="label">
+                    <image class="imagetoicon" src="../../assets/images/fanxing.png"></image> 快递个数
+                </view>
+                <van-field class="ipt" bindinput="listenNumIptChange" disabled="true" value="{{ number ? number : '' }}" placeholder="{{numPlaceholder}}" error="{{!isNum}}" type="number" border="{{false}}" placeholder-style="font-size: 22rpx;" bind:blur="listenNumIptBlur" />
+            </view>
+            <van-field class="textarea" border="{{false}}" type="textarea" placeholder-style="font-size: 24rpx;" placeholder="备注信息，例如：去掉包装盒等" bind:change="onChange" />
+        </view>
+        <view class="num-list">
+            <block wx:if="{{number}}" wx:key="*this">
+                <block wx:for="{{number}}" wx:key="*this">
+                    <view class="num-item">
+                        <view class="num-label">{{index+1}}. </view>
+                        <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}"  value="{{orderList[index-0]}}" />
+                        <van-icon class="icon" bind:click="handleDelectClick" data-index="{{index}}" placeholder="请输入快递单号" color="#999999" size="36rpx" name="delete-o" />
+                    </view>
+                </block>
+                <view class="addOrder-c">
+                    <view class="btn" bindtap="handleAppendOrder">
+                        <van-icon name="plus" />
+                        <text>补充快递单号</text>
+                    </view> 
+                </view>
+            </block>
+        </view>
+    </view>

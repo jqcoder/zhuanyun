@@ -10,6 +10,7 @@
         <block wx:for="{{addressList}}" wx:key="id">
             <address-item isDefault="{{item.isDefault}}"
                         addressInfo="{{item}}"
+                        bind:InfoClick="handleInfoclick"
                         bind:setDefaultAddress="listenSetDefaultClick"
                         bind:deleteAddress="listenDeleteClick">
             </address-item>

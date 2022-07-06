@@ -1,0 +1,23 @@
+/* pages/subPages/home-user-mycoupon/index.wxss */
+.page{
+    padding: 30rpx 24rpx 60rpx;
+
+    .coupon-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30rpx;
+        padding: 0 0 30rpx;
+        min-height: 1200rpx;
+    }
+
+    .duihuan{
+        width: 352rpx;
+        height: 72rpx;
+        line-height: 72rpx;
+        border-radius: 8rpx;
+        text-align: center;
+        color: #fff;
+        background-color: #2f73f4;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,30 @@
+/* pages/subPages/home-user-instructions/index.wxss */
+.page{
+    padding: 22rpx 22rpx 50rpx;
+    .title{
+        font-size: 48rpx;
+        font-weight: 700;
+    }
+
+    .line{
+        font-size: 36rpx;
+        line-height: 50rpx;
+        margin-bottom: 20rpx;
+    }
+
+    .line-right{
+        text-align: right;
+        padding-right: 20rpx;
+        color: #8f918f;
+    }
+
+    .btn{
+        width: 374rpx;
+        height: 82rpx;
+        line-height: 82rpx;
+        background-color: #e36a26;
+        text-align: center;
+        color: #fff;
+        margin: 80rpx auto 0;
+    }
+}

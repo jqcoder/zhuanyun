@@ -9,11 +9,17 @@ Page({
     },
 
     onShow() {
+        console.log(this.data.timeOut);
+        
         let time = setInterval(() => {
-            if (this.data.timeOut === 0) clearInterval(time)
-            this.setData({
-                timeOut: this.data.timeOut - 1
-            })
+            if (this.data.timeOut < 0){
+                clearInterval(time)
+            }else{
+                this.setData({
+                    timeOut: this.data.timeOut - 1
+                })
+            }
+            
         }, 1000)
     },
 

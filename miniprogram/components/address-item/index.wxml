@@ -1,6 +1,6 @@
 <!--components/address-item/index.wxml-->
 <view class="address-item">
-    <view class="info">
+    <view class="info" data-id="{{addressInfo.id}}" bindtap="handleInfoClick">
         <view class="name-box">
             <text>{{addressInfo.headName}}</text>
         </view>

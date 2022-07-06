@@ -1,0 +1,10 @@
+<!--pages/subPages/home-user-mycoupon/index.wxml-->
+<view class="page">
+    <view class="coupon-list">
+        <block wx:for="{{8}}" wx:key="*this">
+            <coupon-item isUse="{{true}}" isexpire="{{true}}" couponInfo="a" class="coupon-item"></coupon-item>
+        </block>
+    </view>
+
+    <view class="duihuan" bindtap="handleOnclick">兑换优惠券</view>
+</view>

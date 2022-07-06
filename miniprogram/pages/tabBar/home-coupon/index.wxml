@@ -1,2 +1,15 @@
 <!--pages/coupon/index.wxml-->
-<text>pages/coupon/index.wxml</text>
+<view class="bg-header"></view>
+
+
+<navigator class="navigator" url="/pages/subPages/coupon-detail/index" hover-class="none">
+    <image class="image" mode="widthFix" src="../../../assets/images/youhui1.png"></image>
+</navigator>
+
+<navigator class="navigator" url="/pages/subPages/coupon-detail/index" hover-class="none">
+    <image class="image" mode="widthFix" src="../../../assets/images/youhui2.png"></image>
+</navigator>
+
+<navigator class="navigator" url="/pages/subPages/coupon-detail/index" hover-class="none">
+    <image class="image" mode="widthFix" src="../../../assets/images/youhui3.png"></image>
+</navigator>

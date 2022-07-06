@@ -1,1 +1,14 @@
 /* pages/coupon/index.wxss */
+.bg-header {
+    height: 300rpx;
+    background-color: #e36a26;
+}
+
+.navigator {
+    text-align: center;
+    margin-top: 60rpx;
+    
+    .image {
+        width: 666rpx;
+    }
+}

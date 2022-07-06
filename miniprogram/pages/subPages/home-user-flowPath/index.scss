@@ -1,0 +1,27 @@
+/* pages/subPages/home-user-flowPath/index.wxss */
+.page{
+    padding: 22rpx 22rpx 50rpx;
+    .title{
+        font-size: 48rpx;
+        font-weight: 700;
+    }
+
+    .line{
+        font-size: 36rpx;
+        line-height: 50rpx;
+        margin-bottom: 20rpx;
+    }
+
+    .line-right{
+        text-align: right;
+        padding-right: 20rpx;
+        color: #8f918f;
+    }
+
+    .btn{
+        height: 82rpx;
+        text-align: center;
+        color: #fff;
+        margin: 80rpx auto 0;
+    }
+}

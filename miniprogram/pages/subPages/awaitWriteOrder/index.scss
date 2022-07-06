@@ -1,6 +1,7 @@
 /* pages/subPages/awaitWriteOrder/index.wxss */
 .page {
     padding-bottom: 104rpx;
+    padding: 30rpx 28rpx 150rpx;
 }
 
 .copy {
@@ -9,65 +10,8 @@
     color: rgba(64, 184, 80, 100);
 }
 
-.address {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 358rpx;
-    margin: 30rpx 28rpx 0;
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 100);
-
-    .address-item {
-        display: flex;
-        align-items: center;
-        column-gap: 26rpx;
-        padding: 0 30rpx;
-
-        .icon-left {
-            width: 52rpx;
-            height: 52rpx;
-            background-color: #40B850;
-            border-radius: 50%;
-
-            .icon {
-                width: 34rpx;
-                height: 34rpx;
-            }
-        }
-
-        .two {
-            background-color: #4C168E;
-        }
-
-        .addressInfo {
-            flex: 1;
-
-            .header {
-                display: flex;
-                align-items: center;
-                font-size: 30rpx;
-
-                .name {
-                    margin-right: 32rpx;
-                }
-
-
-
-            }
-
-            .addressDetail {
-                color: rgba(153, 153, 153, 100);
-                font-size: 12px;
-                margin-top: 20rpx;
-            }
-
-        }
-    }
-}
-
 .form {
-    margin: 50rpx 28rpx 0;
+    margin: 50rpx 0 0;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 100);
 
@@ -173,22 +117,6 @@
                 color: #40B850;
                 margin: 0 0 0 auto;
             }
-        }
-    }
-}
-
-.orderInfo {
-    padding: 30rpx 30rpx 0 30rpx;
-    font-size: 28rpx;
-    margin: 40rpx 28rpx 30rpx;
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 100);
-
-    .item {
-        margin-bottom: 20rpx;
-
-        .status {
-            color: #ff6600;
         }
     }
 }

@@ -1,0 +1,27 @@
+<!--pages/subPages/estimate-fare/index.wxml-->
+<image class="image" mode="widthFix" src="../../../assets/images/gusuan.png"></image>
+
+<view class="title">
+    <text class="text">预估运费</text>
+</view>
+
+<view class="container">
+    <view class="header">
+        <view class="smallBOx b-radius-28 b-shadow-border qudao">
+            <view> 转运渠道</view>
+            <view>普通货物</view>
+        </view>
+        <view class="smallBOx b-radius-28 b-shadow-border zhongliang">
+            <view>预估重量</view>
+            <input type="text" placeholder="请输入重量" placeholder-class="zhongliangPlace"  />
+        </view>
+    </view>
+    <view class="b-radius-28 b-shadow-border volume">
+        <view>预估体积</view>
+        <input type="text" placeholder="请输入重量" placeholder-class="volumePlace"  />
+    </view>
+    <view class="b-radius-28 b-shadow-border  estimate-cash">
+        <view>预估运费（实际结果以订单为准）</view>
+        <view>¥ 0.00</view>
+    </view>
+</view>

@@ -35,11 +35,11 @@
     <!-- 菜单 -->
     <view class="menu-list">
         <van-cell title="我的地址" url="/pages/home-user-address/index" is-link />
-        <van-cell title="我的优惠卷" url="/pages/home-user-activity/index" is-link />
-        <van-cell title="活动中心" is-link />
+        <van-cell title="我的优惠卷" url="/pages/subPages/home-user-mycoupon/index" is-link />
+        <van-cell title="活动中心" url="/pages/home-user-activity/index" is-link />
         <van-cell title="联系客服" is-link />
-        <van-cell title="转运流程" is-link />
-        <van-cell title="转运须知" is-link />
+        <van-cell title="转运流程" url="/pages/subPages/home-user-flowPath/index" is-link />
+        <van-cell title="转运须知" url="/pages/subPages/home-user-instructions/index" is-link />
         <van-cell title="关于我们" is-link />
     </view>
 </view>
