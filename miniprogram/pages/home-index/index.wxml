@@ -41,7 +41,7 @@
                 </view>
                 <view class="operate">
                     <view class="cancel btn" bindtap="onClickHide">取消</view>
-                    <view class="nextStep btn">下一步</view>
+                    <view class="nextStep btn" bindtap="handleNextStepClick">下一步</view>
                 </view>
             </view>
         </view>

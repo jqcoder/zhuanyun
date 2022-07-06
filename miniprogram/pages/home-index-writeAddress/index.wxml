@@ -1,0 +1,57 @@
+<!--pages/home-index-writeAddress/index.wxml-->
+<view class="storeAddress">
+    <view class="header">
+        <view class="icon-box">
+            <van-icon color="#fff" size="40rpx" name="location-o" />
+        </view>
+        <view>仓库地址</view>
+    </view>
+    <view class="info">
+        <view class="userinfo">
+            <view class="store">河马仓库</view>
+            <view>19312341234</view>
+            <view class="copy" bindtap="handleCopyClick">复制</view>
+        </view>
+        <view class="addressInfo">
+            <text>深圳市龙华区龙华街道工业路壹城环智中心C座2607室</text>
+        </view>
+    </view>
+</view>
+
+<!-- 表单 -->
+<view class="form">
+    <view class="header">
+        <view class="left">
+            <view class="info">目标国收件信息</view>
+            <view class="tip">
+                <van-icon size="26rpx" color="#E7691D" name="warning-o" /><text class="text">请用英文填写</text>
+            </view>
+        </view>
+        <view class="selectAddress" bindtap="handleSelectAddressClick">选择地址</view>
+    </view>
+
+    <view class="line-ipt">
+        <text class="label">Name：</text>
+        <van-field value="{{name }}" class="ipt" placeholder="Please fill in the recipient's name" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">Phone：</text>
+        <van-field value="{{phone }}" class="ipt" placeholder="Please fill in the recipient's phone" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">Address：</text>
+        <van-field value="{{address }}" class="ipt" placeholder="Please fill in the address" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">City：</text>
+        <van-field value="{{city }}" class="ipt" placeholder="Please fill in the city" border="{{ false }}" bind:change="onChange" />
+    </view>
+    <view class="line-ipt">
+        <text class="label">PostCode：</text>
+        <van-field value="{{postcode }}" class="ipt" placeholder="Please fill in the postcode" border="{{ false }}" bind:change="onChange" />
+    </view>
+</view>
+
+<view class="btn-c">
+    <view class="btn" bindtap="handleGoOrder">立即转运</view>
+</view>

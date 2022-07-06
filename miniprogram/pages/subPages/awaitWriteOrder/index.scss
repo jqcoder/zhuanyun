@@ -1,0 +1,219 @@
+/* pages/subPages/awaitWriteOrder/index.wxss */
+.page {
+    padding-bottom: 104rpx;
+}
+
+.copy {
+    margin-left: 15rpx;
+    font-size: 26rpx;
+    color: rgba(64, 184, 80, 100);
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 358rpx;
+    margin: 30rpx 28rpx 0;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 100);
+
+    .address-item {
+        display: flex;
+        align-items: center;
+        column-gap: 26rpx;
+        padding: 0 30rpx;
+
+        .icon-left {
+            width: 52rpx;
+            height: 52rpx;
+            background-color: #40B850;
+            border-radius: 50%;
+
+            .icon {
+                width: 34rpx;
+                height: 34rpx;
+            }
+        }
+
+        .two {
+            background-color: #4C168E;
+        }
+
+        .addressInfo {
+            flex: 1;
+
+            .header {
+                display: flex;
+                align-items: center;
+                font-size: 30rpx;
+
+                .name {
+                    margin-right: 32rpx;
+                }
+
+
+
+            }
+
+            .addressDetail {
+                color: rgba(153, 153, 153, 100);
+                font-size: 12px;
+                margin-top: 20rpx;
+            }
+
+        }
+    }
+}
+
+.form {
+    margin: 50rpx 28rpx 0;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 100);
+
+    .tip {
+        display: flex;
+        align-items: center;
+        margin-top: 20rpx;
+        padding: 0 34rpx;
+
+        .text {
+            font-size: 20rpx;
+            color: #E7691D;
+            margin-left: 18rpx;
+        }
+    }
+
+    .form-content {
+        padding: 0 72rpx;
+
+        .num {
+            display: flex;
+            align-items: center;
+
+            .label {
+                color: #4C168E;
+                font-weight: 700;
+
+
+                .imagetoicon {
+                    width: 18rpx;
+                    height: 18rpx;
+                    transform: translateY(-8rpx);
+                }
+            }
+
+            .ipt {
+                flex: 1;
+
+                .van-field__control {
+                    padding-left: 10rpx;
+                    border-radius: 7px;
+                    border: 1px solid rgba(187, 187, 187, 100);
+                }
+
+
+            }
+        }
+
+        .textarea {
+            .van-field__control {
+                height: 200rpx;
+                border-radius: 7px;
+                box-sizing: border-box;
+                padding: 12rpx;
+                border: 1px solid rgba(187, 187, 187, 100);
+            }
+
+            .van-cell {
+                padding-left: 0;
+            }
+        }
+
+    }
+
+    .num-list {
+        padding: 0 72rpx;
+
+        .num-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-right: 28rpx;
+            margin-bottom: 30rpx;
+
+            .ipt {
+                flex: 1;
+                height: 50rpx;
+                margin-left: 18rpx;
+                padding: 0 20rpx;
+                border-radius: 10rpx;
+                border: 2rpx solid rgba(187, 187, 187, 100);
+            }
+
+            .icon {
+                position: absolute;
+                z-index: 99;
+                right: 35rpx;
+            }
+        }
+
+        .addOrder-c {
+            margin-bottom: 15rpx;
+
+            .btn {
+                width: 222rpx;
+                height: 52rpx;
+                border: 1px solid rgba(64, 184, 80, 100);
+                text-align: center;
+                line-height: 52rpx;
+                border-radius: 22px;
+                display: block;
+                font-size: 24rpx;
+                color: #40B850;
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+}
+
+.orderInfo {
+    padding: 30rpx 30rpx 0 30rpx;
+    font-size: 28rpx;
+    margin: 40rpx 28rpx 30rpx;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 100);
+
+    .item {
+        margin-bottom: 20rpx;
+
+        .status {
+            color: #ff6600;
+        }
+    }
+}
+
+.operate {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    text-align: center;
+    height: 104rpx;
+    line-height: 104rpx;
+    color: 36rpx;
+
+    .btn {
+        flex: 1;
+    }
+
+    .customService {
+        background-color: #4e168c;
+        color: #fff;
+    }
+
+    .cancel {
+        background-color: rgba(226, 226, 226, 100);
+    }
+}

@@ -1,0 +1,25 @@
+<!--pages/subPages/agreement/index.wxml-->
+<view class="text">
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+    <view>我已知悉</view>
+</view>
+
+<view class="btn-container">
+    <van-button bind:click="handleBtnClick" disabled="{{timeOut !== -1}}" color="#7232dd">我已知悉 <text wx:if="{{timeOut !== -1}}">{{timeOut}}s</text></van-button>
+</view>

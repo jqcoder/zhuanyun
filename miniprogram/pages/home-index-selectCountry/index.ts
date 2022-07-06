@@ -56,22 +56,15 @@ Page({
         let iptVal = e.detail
         if (!iptVal) {
             let length = Object.keys(this.data.searchResult).length
-            this.setData({
+            return this.setData({
                 searchResult: {},
                 issearchResult: false
             })
-            return
         }
-
         // 判断是中文还是英文
         let isChineseReg: RegExp = /^[a-zA-Z]+$/
         let isChinese = !isChineseReg.test(iptVal)
-        let searchResult: any[] = this.getSearchResult(iptVal, isChinese)
-        let length = Object.keys(searchResult).length
-        this.setData({
-            searchResult,
-            issearchResult: !!length
-        })
+        this.getSearchResult(iptVal, isChinese)
     }, 300),
 
     getSearchResult(iptVal: string, isChinese: boolean) {
@@ -91,7 +84,11 @@ Page({
                 }
             })
         }
-        return resultObj
+        let length = Object.keys(resultObj).length
+        this.setData({
+            searchResult: resultObj,
+            issearchResult: !!length
+        })
     }
 
 

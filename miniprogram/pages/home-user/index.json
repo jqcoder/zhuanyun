@@ -1,7 +1,6 @@
 {
     "usingComponents": {
-        "van-cell": "@vant/weapp/cell/index",
-        "van-icon": "@vant/weapp/icon/index"
+        "van-cell": "@vant/weapp/cell/index"
     },
     "navigationBarBackgroundColor": "#E7691D",
     "navigationBarTitleText": "万兴转运"

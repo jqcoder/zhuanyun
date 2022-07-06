@@ -11,7 +11,7 @@
 <!-- 地址列表 -->
 <view class="countryList">
     <van-index-bar index-list="{{ indexList }}">
-        <!-- <block wx:if="{{!issearchResult}}">
+        <block wx:if="{{!issearchResult}}">
             <block wx:for="{{ countryInfo}}" wx:key="index">
                 <van-index-anchor index="{{index}}" />
                 <block wx:for="{{item}}" wx:key="countryCName">
@@ -32,16 +32,16 @@
                     </view>
                 </block>
             </block>
-        </block> -->
+        </block>
 
-        <van-index-bar index-list="{{ indexList }}">
+        <!-- <van-index-bar index-list="{{ indexList }}">
             <block wx:if="{{!issearchResult}}">
                 <country-list countryInfo="{{countryInfo}}"></country-list>
             </block>
             <block wx:else>
                 <country-list countryInfo="{{searchResult}}"></country-list>
             </block>
-        </van-index-bar>
+        </van-index-bar> -->
     </van-index-bar>
 </view>
 

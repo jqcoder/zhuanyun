@@ -10,7 +10,7 @@
                 <view class="tel">{{addressInfo.tel}}</view>
             </view>
             <view class="foot">
-                <text>{{addressInfo.address}}</text> 
+                <text>{{addressInfo.address}}</text>
             </view>
         </view>
     </view>
@@ -22,7 +22,7 @@
             </view>
         </block>
         <block wx:else>
-            <view class="left" bindtap="handleDefaultAddressClick">
+            <view class="left" data-id="{{addressInfo.id}}" bindtap="handleDefaultAddressClick">
                 <view class="round"></view>
                 <text class="default">设为默认寄件地址</text>
             </view>

@@ -27,11 +27,11 @@ Component({
     },
 
     methods: {
-        handleDefaultAddressClick() {
-            that.triggerEvent('setDefaultAddress', that.properties.addressInfo)
+        handleDefaultAddressClick(e: any) {
+            that.triggerEvent('setDefaultAddress', e.currentTarget.dataset.id)
         },
         handleDeleteClick(e: any) {
-            that.triggerEvent('deleteAddress',e.currentTarget.dataset.id)
+            that.triggerEvent('deleteAddress', e.currentTarget.dataset.id)
         }
     }
 })

@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "van-field": "@vant/weapp/field/index",
+        "van-dialog": "@vant/weapp/dialog/index"
+    },
+    "navigationBarBackgroundColor": "#4E148C",
+    "navigationBarTitleText": "订单详情"
+}

@@ -43,7 +43,7 @@ Page({
     },
 
     // 开启遮罩层后阻止背景滑动      
-    moveHandle() {},
+    moveHandle() { },
 
     // 监听转运的模式按钮点击
     handleTransitBtnClick(e: any) {
@@ -60,10 +60,17 @@ Page({
         })
     },
 
+    // 转运下一步
+    handleNextStepClick() {
+        wx.navigateTo({
+            url: "/pages/home-index-writeAddress/index"
+        })
+    },
+
     // to复制仓库地址
     handleCopyLocationClick() {
         wx.navigateTo({
-            url: "/pages/copyLocation/index"
+            url: "/pages/subPages/copyLocation/index"
         })
     },
 

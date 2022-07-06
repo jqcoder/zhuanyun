@@ -1,0 +1,130 @@
+/* pages/home-index-writeAddress/index.wxss */
+.storeAddress {
+    // width: 694rpx;
+    height: 270rpx;
+    margin: 65rpx 26rpx 30rpx;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 100);
+
+    .header {
+        display: flex;
+        align-items: center;
+        color: #101010;
+        margin-top: 15rpx;
+        padding-left: 48rpx;
+
+        .icon-box {
+            text-align: center;
+            width: 52rpx;
+            height: 52rpx;
+            line-height: 60rpx;
+            background-color: #4C168E;
+            border-radius: 50%;
+            margin-right: 20rpx;
+        }
+    }
+
+    .info {
+        padding-left: 94rpx;
+        color: #101010;
+
+        .userinfo {
+            display: flex;
+            align-items: center;
+            font-size: 30rpx;
+            margin-top: 16rpx;
+
+            .store {
+                margin-right: 72rpx;
+            }
+
+            .copy {
+                font-size: 22rpx;
+                color: #44b855;
+                margin-left: 10rpx;
+            }
+        }
+
+        .addressInfo {
+            font-size: 24rpx;
+            padding-right: 34rpx;
+            margin-top: 20rpx;
+            color: #999999;
+        }
+    }
+}
+
+.form {
+    height: 740rpx;
+    margin: 0 28rpx;
+    padding-top: 54rpx;
+    border-radius: 6rpx;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 100);
+    box-sizing: border-box;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 36rpx 0 112rpx;
+
+        .left {
+            .tip {
+                display: flex;
+                align-items: center;
+                margin-top: 20rpx;
+
+                .text {
+                    font-size: 20rpx;
+                    color: #E7691D;
+                    margin-left: 10rpx;
+                }
+            }
+        }
+
+        .selectAddress {
+            width: 130rpx;
+            text-align: center;
+            line-height: 46rpx;
+            background-color: #D9F1DD;
+            border-radius: 8rpx;
+            font-size: 24rpx;
+            border: 1px solid rgba(64, 184, 80, 100);
+            color: rgba(64, 184, 80, 100);
+        }
+    }
+
+    .line-ipt {
+        display: flex;
+        align-items: center;
+        font-size: 28rpx;
+
+        .label {
+            width: 156rpx;
+            text-align: right;
+            padding-left: 10rpx;
+        }
+
+        .ipt {
+            flex: 1;
+        }
+    }
+}
+
+.btn-c {
+    display: flex;
+    justify-content: center;
+    margin-top: 102rpx;
+
+    .btn {
+        width: 324rpx;
+        height: 76rpx;
+        line-height: 76rpx;
+        border-radius: 8px;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(76, 22, 142, 100);
+    }
+}

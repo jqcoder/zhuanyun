@@ -1,14 +1,17 @@
 {
     "pages": [
         "pages/home-index/index",
-        "pages/home-coupon/index",
-        "pages/home-order/index",
+        "pages/tabBar/home-coupon/index",
+        "pages/tabBar/home-order/index",
         "pages/home-user/index",
-        "pages/copyLocation/index",
+        "pages/subPages/copyLocation/index",
         "pages/home-user-activity/index",
         "pages/home-user-address/index",
         "pages/home-user-address-add/index",
-        "pages/home-index-selectCountry/index"
+        "pages/home-index-selectCountry/index",
+        "pages/home-index-writeAddress/index",
+        "pages/subPages/agreement/index",
+        "pages/subPages/awaitWriteOrder/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -19,21 +22,20 @@
     "sitemapLocation": "sitemap.json",
     "tabBar": {
         "selectedColor": "#4C168E",
-        "list": [
-            {
+        "list": [{
                 "pagePath": "pages/home-index/index",
                 "text": "首页",
                 "iconPath": "./assets/images/tabbar/home.png",
                 "selectedIconPath": "./assets/images/tabbar/home.png"
             },
             {
-                "pagePath": "pages/home-coupon/index",
+                "pagePath": "pages/tabBar/home-coupon/index",
                 "text": "优惠卷",
                 "iconPath": "./assets/images/tabbar/coupon.png",
                 "selectedIconPath": "./assets/images/tabbar/coupon.png"
             },
             {
-                "pagePath": "pages/home-order/index",
+                "pagePath": "pages/tabBar/home-order/index",
                 "text": "订单",
                 "iconPath": "./assets/images/tabbar/order.png",
                 "selectedIconPath": "./assets/images/tabbar/coupon.png"
@@ -45,5 +47,8 @@
                 "selectedIconPath": "./assets/images/tabbar/coupon.png"
             }
         ]
+    },
+    "usingComponents": {
+        "van-icon": "@vant/weapp/icon/index"
     }
 }

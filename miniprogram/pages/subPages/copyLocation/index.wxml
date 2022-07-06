@@ -3,7 +3,7 @@
     <view class="location-container">
         <view class="title">
             <view class="icon-container flex-c-c">
-                <image class="location-icon" src="../../assets/images/location.png"></image>
+                <image class="location-icon" src="../../../assets/images/location.png"></image>
             </view>
             <text>仓库地址</text>
         </view>
@@ -32,10 +32,9 @@
     <view class="step">
         <block wx:for="{{stepInfo}}" wx:key="title">
             <view class="line">
-            <view class="title">{{item.title}}</view>
-            <view class="content">{{item.content}}</view>
-        </view>
+                <view class="title">{{item.title}}</view>
+                <view class="content">{{item.content}}</view>
+            </view>
         </block>
     </view>
 </view>
-
