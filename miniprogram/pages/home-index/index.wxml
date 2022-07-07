@@ -27,7 +27,7 @@
     <view class="to-from">
         <view class="to">中国</view>
         <image class="image" src="../../assets/images/home-index/feiji.png"></image>
-        <view class="from" bindtap="handleSelectCountry">美国</view>
+        <view class="from" bindtap="handleSelectCountry">{{destination.countryCName}}</view>
     </view>
     <view class="button" bindtap="handleGoTransitClick">立即转运</view>
     <van-popup show="{{ showRransit }}" catchtouchmove="moveHandle" bind:click-overlay="onClickHide">
@@ -36,7 +36,7 @@
                 <view class="title">预选渠道</view>
                 <view class="btn-list">
                     <block wx:for="{{transitInfo}}" wx:key="id">
-                        <view bindtap="handleTransitBtnClick" data-index="{{index}}" class="btn {{active === index ? 'btn-active': ''}} ">普通货物</view>
+                        <view bindtap="handleTransitBtnClick" data-index="{{index}}" class="btn {{active === index ? 'btn-active': ''}} ">{{item.method}}</view>
                     </block>
                 </view>
                 <view class="operate">

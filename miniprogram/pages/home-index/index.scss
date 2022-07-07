@@ -71,6 +71,14 @@
             width: 84rpx;
             height: 84rpx;
         }
+
+        .to,.from{
+            text-align: center;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 
     .button {

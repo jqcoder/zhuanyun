@@ -1,0 +1,88 @@
+/* pages/subPages/order-all/index.wxss */
+.order-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 18rpx;
+    margin-top: 30rpx;
+
+    .item{
+        display: flex;
+        align-items: center;
+        width: 322rpx;
+        color: #fff;
+        border-radius: 28px;
+        height: 182rpx;
+        box-sizing: border-box;
+        padding-left: 30rpx;
+        background-color: #2d81e9;
+        box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(187, 187, 187, 100);
+
+        .title{
+            font-weight: 700;
+        }
+        .content{
+            font-size: 26rpx;
+            margin-top: 10rpx;
+        }
+    }
+}
+
+.container{
+    padding: 32rpx;
+    border-radius: 20rpx;
+    box-shadow: 0px 0px 5px 0px rgba(174, 174, 174, 35);
+    margin: 40rpx 24rpx;
+
+    .line{
+        margin-top: 10rpx;
+        .content{
+            display: flex;
+            align-items: center;
+    
+            .first{
+                width: 40rpx;
+                height: 40rpx;
+                line-height: 40rpx;
+                text-align: center;
+                color: #fff;
+                font-size: 24rpx;
+                border-radius: 50%;
+                background-color: #2752c1;
+            }
+    
+            .title{
+                margin: 0 40rpx 0 30rpx ;
+            }
+    
+            .bigNum{
+                font-size: 40rpx;
+                color: #0881EC;
+            }
+        }
+
+        .node{
+            min-height: 30rpx;
+            margin-left: 20rpx;
+            padding-left: 50rpx;
+            border-left: 1px solid #bcbcbc;
+            color: rgba(188, 188, 188, 100);
+            font-size: 24rpx;
+            line-height: 50rpx;
+
+            .children{
+                display: flex;
+                justify-content: space-between;
+                width: 140rpx;
+            }
+        }
+    }
+
+    .line:last-of-type{
+        .node{
+            border-left: 0;
+        }
+    }
+    
+}

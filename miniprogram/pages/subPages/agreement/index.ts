@@ -1,16 +1,18 @@
 // pages/subPages/agreement/index.ts
 Page({
     data: {
-        timeOut: 3
+        timeOut: 1,
+        address: ''
     },
 
-    onLoad() {
-
+    onLoad(options) {
+       this.setData({
+        address: options.address
+       })
+        
     },
 
     onShow() {
-        console.log(this.data.timeOut);
-        
         let time = setInterval(() => {
             if (this.data.timeOut < 0){
                 clearInterval(time)
@@ -19,13 +21,13 @@ Page({
                     timeOut: this.data.timeOut - 1
                 })
             }
-            
         }, 1000)
     },
 
     handleBtnClick() {
+        let address = this.data.address
         wx.navigateTo({
-            url: '/pages/subPages/awaitWriteOrder/index'
+            url: `/pages/subPages/awaitWriteOrder/index?address=${address}`
         })
     }
 })

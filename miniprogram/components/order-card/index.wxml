@@ -6,14 +6,18 @@
     </view>
     <view class="item">
         <text>转运线路：中国 - 美国</text>
+        <!-- <text>转运线路：中国 - {{}}</text> -->
     </view>
     <view class="item">
         <text>预选渠道：普通货物</text>
+        <!-- <text>预选渠道：{{}}</text> -->
     </view>
     <view class="item">
-        <text>订单状态：<text class="status">待填写</text></text>
+        <text>订单状态：<text class="status tianxie">待填写</text></text>
+        <!-- <text>订单状态：<text class="status">{{}}</text></text> -->
     </view>
     <view class="item">
         <text>下单时间：2022-05-09 14:07:12</text>
+        <!-- <text>下单时间：{{}}</text> -->
     </view>
 </view>

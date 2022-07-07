@@ -6,18 +6,18 @@ Page({
         addressList: [
             {
                 id: 1,
-                name: '小郑',
-                headName: '小',
+                name: 'jack zheng',
                 tel: '13066664444',
                 address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA',
+                postcode: 123984,
                 isDefault: 1
             },
             {
                 id: 2,
-                name: '杰杰杰',
-                headName: '杰',
+                name: 'jiejiejie',
                 tel: '13066663333',
                 address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA',
+                postcode: 125725,
                 isDefault: 0
             }
         ]
@@ -73,17 +73,20 @@ Page({
 
     handleInfoclick(e: any){
         let lastPage = getCurrentPages()[getCurrentPages().length-2]
+        
         // 判断上一层一面是哪个
         if(lastPage.route === 'pages/home-index-writeAddress/index'){
-            let addressId = e.detail
+            let addressInfo = e.detail
             lastPage.setData({
-                addressID: addressId
+                name: addressInfo.name,
+                phone: addressInfo.tel,
+                address: addressInfo.address,
+                postcode: addressInfo.postcode
             })
-            wx.navigateBack({
-                delta: 1
-            })
-        }
+            wx.navigateBack()
+        }else{
 
+        }
     }
 
 })

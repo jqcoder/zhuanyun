@@ -2,7 +2,6 @@
 <block wx:if="{{!addressList.length}}">
     <view class="empty">
         <my-empty text="亲，你还没有添加地址信息喔~"></my-empty>
-        <van-button color="#e36a26" custom-style="width:352rpx; height: 72rpx" bindtap="handleAddAddressClick">添加地址</van-button>
     </view>
 </block>
 <block wx:else>
@@ -17,5 +16,5 @@
         </block>
     </view>
 </block>
-
+<van-button color="#e36a26" custom-style="width:352rpx; height: 72rpx;" block bindtap="handleAddAddressClick">添加地址</van-button>
 <van-dialog id="van-dialog" />

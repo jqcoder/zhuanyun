@@ -1,0 +1,8 @@
+var formatNameHead = function (value) {
+    if(!value) return
+    return value.substring(0, 1)
+}
+
+module.exports = {
+    formatNameHead: formatNameHead
+}

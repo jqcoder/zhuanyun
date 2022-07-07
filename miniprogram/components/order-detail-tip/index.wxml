@@ -1,0 +1,4 @@
+<!--components/order-detail-tip/index.wxml-->
+<view class="tip" style="background-color: {{bgc}}; color: {{color}};">
+{{text}}
+</view>

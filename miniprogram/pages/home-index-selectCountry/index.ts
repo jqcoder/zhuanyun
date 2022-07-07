@@ -89,6 +89,17 @@ Page({
             searchResult: resultObj,
             issearchResult: !!length
         })
+    },
+
+    handleCountryItemClick(e){
+        let selectCountry = e.currentTarget.dataset.country
+        
+        let lastPage = getCurrentPages()[getCurrentPages().length-2]
+        lastPage.setData({
+            destination: selectCountry
+        })
+        wx.navigateBack()
+
     }
 
 

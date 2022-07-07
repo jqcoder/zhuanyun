@@ -11,7 +11,7 @@ Page({
         destination: {
             name: 'KK Chen',
             tel: '18688880130',
-            address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA'
+            address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA123'
         },
 
         number: 0,
@@ -28,9 +28,20 @@ Page({
         textArea: ''
     },
 
-    onLoad() {
+    onLoad(options) {
+        if (!options.address) return
+        let address = JSON.parse(options.address)
+        console.log(address);
+        
+        // 拿到汇集的数据
+        this.setData({
+            ['destination.name']: address.name,
+            ['destination.tel']: address.tel,
+            ['destination.address']: address.address
+        })
 
     },
+
 
     handleCopyClick(e) {
         wx.setClipboardData({
@@ -38,13 +49,13 @@ Page({
         })
     },
 
-    handleCardOrderClick(e){
+    handleCardOrderClick(e) {
         wx.setClipboardData({
             data: '物流仓库地址',
         })
     },
 
-    onTextAreaChange(e){
+    onTextAreaChange(e) {
         this.setData({
             textArea: e.detail
         })
@@ -58,7 +69,7 @@ Page({
             this.setData(this.data.isNan)
             return
         }
-        this.setData({isNum: true})
+        this.setData({ isNum: true })
 
         // 输入的数值大于10就赋值10，反之就直接赋值
         if (Number(keyWord) <= 10) {
@@ -86,21 +97,38 @@ Page({
 
     // 创建输入框arr item
     createIptItem(num) {
-        for (let i = 0; i < num ; i++) {
-            this.data.orderList.push('')
+
+        for (let i = 0; i < num; i++) {
+            this.data.orderList.push({
+                disabled: false,
+                value: '',
+            })
         }
         this.setData({
             orderList: this.data.orderList
         })
     },
 
-    // 监听输入框值的修改
+    // 监听输入框列表值的修改
     handleIptItemValChange(e) {
-        let keyWord = e.detail.value
-        let index = e.currentTarget.dataset.index
-        this.setData({
-            [`orderList[${index}]`]: keyWord
+        let keyWord = e.detail.detail.value
+        let index = e.detail.currentTarget.dataset.index
+        let keyword = e.detail.detail.value
+        console.log(keyword);
+        
+        wx.showModal({
+            title: '请确认快递单号是否无误',
+            showCancel: true,
+            success: (res) => {
+                if (res.confirm && !!keyword) {
+                    this.setData({
+                        [`orderList[${index}].value`]: keyWord,
+                        [`orderList[${index}].disabled`]: true
+                    })
+                }
+            }
         })
+
     },
 
     // 监听删除点击
@@ -110,7 +138,7 @@ Page({
             message: '确认删除此订单吗',
         }).then(() => {
             // 拿到在数组的索引，去删除指定元素，然后赋值回去，并且数字-1
-            let index = e.currentTarget.dataset.index
+            let index = e.detail.currentTarget.dataset.index
             this.data.orderList.splice(index, 1)
             this.setData({
                 orderList: this.data.orderList,
@@ -120,6 +148,12 @@ Page({
                 title: '成功',
                 icon: 'success',
             })
+
+            if (this.data.number == 0) {
+                this.setData({
+                    NumIptDisabled: false
+                })
+            }
         }).catch(() => {
         });
     },
@@ -143,7 +177,6 @@ Page({
             })
 
         }).catch(() => { })
-
     },
 
     // 取消订单
@@ -157,20 +190,20 @@ Page({
     },
 
     // 确认订单
-    handleAddOrder(){
+    handleAddOrder() {
         Dialog.confirm({
             title: '请确认快递单号是否无误',
             message: '请确认快递单号【test12346】是否无误，一旦提交，不可修改。',
         }).then(() => {
-            if(!this.data.number){
+            if (!this.data.number) {
                 wx.showToast({
                     title: '快递单号不能为空'
                 })
             }
             console.log(this.data.textArea);
             console.log(this.data.orderList);
-            
-            
+
+
 
         }).catch(() => { })
     }

@@ -1,8 +1,10 @@
 <!--components/address-item/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
 <view class="address-item">
-    <view class="info" data-id="{{addressInfo.id}}" bindtap="handleInfoClick">
+    <view class="info" data-detail="{{addressInfo}}" bindtap="handleInfoClick">
         <view class="name-box">
-            <text>{{addressInfo.headName}}</text>
+            <text>{{format.formatNameHead(addressInfo.name)}}</text>
         </view>
         <view class="detail">
             <view class="header">

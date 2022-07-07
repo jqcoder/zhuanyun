@@ -1,33 +1,51 @@
-// components/order-form/index.ts
+// components/order-detail-form/index.ts
 Component({
     properties: {
-        isShowTip: {
+        number:{
+            type: Number,
+            value: 0
+        },
+        numPlaceholder: {
+            type: String,
+            value: '不能为空'
+        },
+        NumIptDisabled: {
             type: Boolean,
             value: false
         },
-
-        tipText: {
+        textareaPlaceholder: {
             type: String,
-            value: ''
+            value: '不能为空'
         },
-
-        labelTextColor: {
-            type: String,
-            value: '#4C168E'
+        orderList: {
+            type: Array,
+            value: []
+        },
+        allIptDisabled: {
+            type: Boolean,
+            value: false
         }
     },
 
-    /**
-     * 组件的初始数据
-     */
     data: {
 
     },
 
-    /**
-     * 组件的方法列表
-     */
     methods: {
-
+        listenNumIptChange(e){
+            this.triggerEvent('numberInputChange',e.detail.value)
+        },
+        listenNumIptBlur(){
+            this.triggerEvent('numberInputBlur')
+        },
+        handleIptItemValChange(e){
+            this.triggerEvent('orderItemChange', e)
+        },
+        handleDelectClick(e){
+            this.triggerEvent('orderItemDelete', e)
+        },
+        handleAppendOrder(){
+            this.triggerEvent('orderItemAppend')
+        }
     }
 })

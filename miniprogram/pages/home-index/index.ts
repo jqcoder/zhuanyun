@@ -4,24 +4,31 @@ const app = getApp<IAppOption>()
 Page({
     data: {
         showRransit: false,
-        active: 0,
-        transitInfo: [{
-            id: 1,
-            method: '普通货物',
-        }, {
-            id: 2,
-            method: '普通货物',
-        }, {
-            id: 3,
-            method: '普通货物',
+        transitMethods: {},
+        fromCountry: '中国',
+        destination: {
+            countryCName: '美国',
+            countryEName: 'United States'
         },
-        {
-            id: 4,
-            method: '普通货物',
-        }, {
-            id: 5,
-            method: '普通货物',
-        }]
+        active: 0,
+        transitInfo: [
+            {
+                id: 1,
+                method: '普通货物',
+            }, {
+                id: 2,
+                method: '电子产品',
+            }, {
+                id: 3,
+                method: '液体粉末',
+            },
+            {
+                id: 4,
+                method: '内地EMS',
+            }, {
+                id: 5,
+                method: '广东EMS',
+            }],
     },
 
     onLoad() {
@@ -62,18 +69,23 @@ Page({
 
     // 转运下一步
     handleNextStepClick() {
+        let active = this.data.active
+        this.setData({
+            transitMethods: this.data.transitInfo[active]
+        })
+
         wx.navigateTo({
-            url: "/pages/home-index-writeAddress/index"
+            url: `/pages/home-index-writeAddress/index`
         })
     },
 
-    handleGusuanClick(){
+    handleGusuanClick() {
         wx.navigateTo({
             url: '/pages/subPages/estimate-fare/index'
         })
     },
 
-    handleXuZhiClick(){
+    handleXuZhiClick() {
         wx.navigateTo({
             url: '/pages/subPages/home-user-instructions/index'
         })

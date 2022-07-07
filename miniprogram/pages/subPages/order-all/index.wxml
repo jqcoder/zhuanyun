@@ -1,0 +1,99 @@
+<!--pages/subPages/order-all/index.wxml-->
+<view class="order-list">
+    <view class="item">
+        <view>
+            <view class="title">全部包裹</view>
+            <view class="content">查看您的全部包裹</view>
+        </view>
+    </view>
+    <view class="item">
+        <view>
+            <view class="title">退回包裹</view>
+            <view class="content">退回给商家或仓库处理</view>
+        </view>
+    </view>
+    <view class="item">
+        <view>
+            <view class="title">异常包裹</view>
+            <view class="content">违禁品</view>
+        </view>
+    </view>
+    <view class="item">
+        <view>
+            <view class="title">入库包裹</view>
+            <view class="content">已入库的包裹</view>
+        </view>
+    </view>
+</view>
+
+<view class="container">
+
+    <view class="line">
+        <view class="content">
+            <view class="first">1</view>
+            <view class="title">待处理</view>
+            <view class="bigNum">3</view>
+        </view>
+        <view class="node">
+        </view>
+    </view>
+
+    <view class="line">
+        <view class="content">
+            <view class="first">2</view>
+            <view class="title">待入仓</view>
+            <view class="bigNum">6</view>
+        </view>
+        <view class="node">
+            <view class="children">
+                <view class="left-title">待拣货</view>
+                <view class="num">6</view>
+            </view>
+            <view class="children">
+                <view class="left-title">待打包</view>
+                <view class="num">6</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="line">
+        <view class="content">
+            <view class="first">3</view>
+            <view class="title">待出仓</view>
+            <view class="bigNum">7</view>
+        </view>
+        <view class="node">
+            <view class="children">
+                <view class="left-title">未付款</view>
+                <view class="num">3</view>
+            </view>
+            <view class="children">
+                <view class="left-title">已付款</view>
+                <view class="num">4</view>
+            </view>
+            <view class="children">
+                <view class="left-title">打包中</view>
+                <view class="num">7</view>
+            </view>
+            <view class="children">
+                <view class="left-title">打包完成</view>
+                <view class="num">7</view>
+            </view>
+        </view>
+    </view>
+
+     <view class="line">
+        <view class="content">
+            <view class="first">4</view>
+            <view class="title">待收货</view>
+            <view class="bigNum">8</view>
+        </view>
+        <view class="node">
+            <view class="children">
+                <view class="left-title">转运中</view>
+                <view class="num">8</view>
+            </view>
+        </view>
+    </view>
+    
+</view>

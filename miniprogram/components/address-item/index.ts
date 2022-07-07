@@ -28,7 +28,7 @@ Component({
 
     methods: {
         handleInfoClick(e: any) {
-            that.triggerEvent('InfoClick', e.currentTarget.dataset.id)
+            that.triggerEvent('InfoClick', e.currentTarget.dataset.detail)
         },
         handleDefaultAddressClick(e: any) {
             that.triggerEvent('setDefaultAddress', e.currentTarget.dataset.id)

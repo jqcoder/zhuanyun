@@ -8,14 +8,36 @@
         <view class="to">中国</view>
         <view class="center">
             <image class="image" mode="widthFix" src="../../assets/images/feijizi.png"></image>
-            <text class="text">待入仓</text>
+            <block wx:if="{{orderType == 0}}">
+                <text class="text">待处理</text>
+            </block>
+            <block wx:if="{{orderType == 1}}">
+                <text class="text">待入仓</text>
+            </block>
+            <block wx:elif="{{orderType == 2}}">
+                <text class="text">待拣货</text>
+            </block>
+            <block wx:elif="{{orderType == 3}}">
+                <text class="text">待打包</text>
+            </block>
+            <block wx:elif="{{orderType == 4}}">
+                <text class="text">待出仓</text>
+            </block>
+            <block wx:elif="{{orderType == 5}}">
+                <text class="text">已出仓</text>
+            </block>
         </view>
         <view class="from" bindtap="handleSelectCountry">美国</view>
     </view>
     <view class="btn-list">
         <view class="btn goPay">去支付</view>
-        <view class="btn yesBale">确认打包</view>
-        <view class="btn logistics-detail">物流详情</view>
+        <block wx:if="{{orderType == 1}}">
+            <view class="btn yesBale">确认打包</view>
+        </block>
+        <block wx:elif="{{orderType == 5}}">
+            <view class="btn logistics-detail">物流详情</view>
+        </block>
+        
         <view class="btn detail">详情</view>
     </view>
 </view>

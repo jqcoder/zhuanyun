@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "address-card": "../../../components/address-card/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-button": "@vant/weapp/button/index"
+    },
+    "navigationBarBackgroundColor": "#4E148C",
+    "navigationBarTitleText": "订单详情"
+}

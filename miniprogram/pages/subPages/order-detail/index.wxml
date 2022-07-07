@@ -1,0 +1,14 @@
+<!--pages/subPages/order-detail/index.wxml-->
+<!-- 提示 -->
+<order-detail-tip text="您的快递包裹已全部到达仓库，请及时确认捡货打包。" bgc="{{themeBgc}}"></order-detail-tip>
+
+<view class="page">
+    <!-- 地址卡片 -->
+    <address-card store="{{store}}" destination="{{destination}}"></address-card>
+
+    <!-- 订单单号详情 -->
+    <order-detail-form-static></order-detail-form-static>
+
+    <!-- 订单卡片 -->
+    <order-card></order-card>
+</view>

@@ -16,7 +16,11 @@
         "pages/subPages/coupon-detail/index",
         "pages/subPages/home-user-mycoupon/index",
         "pages/subPages/home-user-instructions/index",
-        "pages/subPages/home-user-flowPath/index"
+        "pages/subPages/home-user-flowPath/index",
+        "pages/subPages/order-detail/index",
+        "pages/subPages/order-insure/index",
+        "pages/subPages/order-pay-detail/index",
+        "pages/subPages/order-all/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

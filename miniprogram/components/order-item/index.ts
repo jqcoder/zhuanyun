@@ -4,6 +4,10 @@ Component({
         order: {
             type: Object,
             value: {}
+        },
+        orderType: {
+            type: Number,
+            value: 0
         }
     },
 

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "van-switch": "@vant/weapp/switch/index",
+        "van-popup": "@vant/weapp/popup/index"
+    },
+    "navigationBarBackgroundColor": "#4E148C",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "万兴转运"
+}
