@@ -42,7 +42,7 @@
     </view>
 </view>
 
-<van-popup show="{{ showCard }}">
+<van-popup show="{{ showCard }}" bind:close="listenHideCard">
     <view class="wallpaper">
         <view class="title">风险告知书</view>
         <text class="content">尊敬的客户:
@@ -52,8 +52,8 @@
             超过运费价值且最高不超过100美元。请悉知。
         </text>
         <view class="btn-g">
-            <view class="btn">购买保险</view>
-            <view class="btn">承担风险</view>
+            <view class="btn" bindtap="handlePayClick">购买保险</view>
+            <view class="btn" bindtap="handleCancelClick">承担风险</view>
         </view>
     </view>
 </van-popup>

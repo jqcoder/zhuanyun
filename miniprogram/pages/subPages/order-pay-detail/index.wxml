@@ -35,7 +35,7 @@
             <text>关税险</text>
             <text>￥28.00</text>
         </view>
-        <view class="coupon line">
+        <view class="coupon line" bindtap="handleCouponClick">
             <view class="left">
                 <van-icon color="#EC0606" size="36rpx" name="paid" />
                 <text>优惠券</text>
@@ -58,8 +58,46 @@
     </view>
 </view>
 
+<!-- 选择优惠券 -->
+<van-popup show="{{ isOpenCoupon }}" round closeable bind:close="onCloseCoupon" position="bottom" custom-style="height: 65%">
+    <view class="selectCoupon">
+        <view class="coupon-title">选择优惠券</view>
+        <scroll-view scroll-y class="coupon-scroll">
+            <van-radio-group value="{{ couponRadio }}" bind:change="onSelectCouponChange">
+                <block wx:for="{{6}}" wx:key="*this">
+                    <view class="coupon-item">
+                        <view class="coupon-info">
+                            <view>红杉资本优惠券</view>
+                            <view class="data">永久有效 · 所有课程可用</view>
+                        </view>
+                        <view class="coupon-price">
+                            <view class="price">-￥2000.00</view>
+                        </view>
+                        <view class="coupon-isUse">
+                            <van-radio name="{{index}}"></van-radio>
+                        </view>
+                    </view>
+                </block>
+            </van-radio-group>
+            <view class="coupon-item">
+                        <view class="coupon-info">
+                            <view>不使用优惠券</view>
+                        </view>
+                        <view class="coupon-isUse">
+                            <van-checkbox value="{{ isUseCoupon }}" bind:change="handleUseConponChange"></van-checkbox>
+                        </view>
+                    </view>
+        </scroll-view>
+        <view class="btn-g">
+            <view class="isUse" bindtap="handleAffirmConponClick">确认使用</view>
+        </view>
+    </view>
+
+</van-popup>
+
+<!-- 协议 -->
 <van-popup show="{{ isOpenPopup }}" round position="bottom" custom-style="height: 80%">
-    <scroll-view scroll-y class="scroll" show-scrollbar="{{false}}">
+    <scroll-view scroll-y class="xieyi-scroll" show-scrollbar="{{false}}">
         <text class="text">转运协议
             您使用霆宇国际网系统服务或提交运单，将货物交付给霆宇国际网仓库，就表示您或者您所代表的货物的利益人，接受霆宇国际网的运输条款及条件，无论您是否已经提交或将要提交运单。您口头或书面的指示如果与霆宇国际网的提交条款发生冲突，我们将不受您指示的约束。
 

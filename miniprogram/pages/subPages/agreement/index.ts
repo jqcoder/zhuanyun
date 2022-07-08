@@ -5,11 +5,7 @@ Page({
         address: ''
     },
 
-    onLoad(options) {
-       this.setData({
-        address: options.address
-       })
-        
+    onLoad() {
     },
 
     onShow() {
@@ -25,9 +21,8 @@ Page({
     },
 
     handleBtnClick() {
-        let address = this.data.address
         wx.navigateTo({
-            url: `/pages/subPages/awaitWriteOrder/index?address=${address}`
+            url: `/pages/subPages/awaitWriteOrder/index?orderState=0`
         })
     }
 })

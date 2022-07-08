@@ -1,6 +1,10 @@
 // components/order-detail-form/index.ts
 Component({
     properties: {
+        orderState: {
+            type: String,
+            value: '0'
+        },
         number:{
             type: Number,
             value: 0
@@ -20,10 +24,6 @@ Component({
         orderList: {
             type: Array,
             value: []
-        },
-        allIptDisabled: {
-            type: Boolean,
-            value: false
         }
     },
 
@@ -32,20 +32,23 @@ Component({
     },
 
     methods: {
-        listenNumIptChange(e){
+        listenNumIptChange(e: any){ // num修改
             this.triggerEvent('numberInputChange',e.detail.value)
         },
-        listenNumIptBlur(){
+        listenNumIptBlur(){ // num失焦
             this.triggerEvent('numberInputBlur')
         },
-        handleIptItemValChange(e){
+        handleIptItemValChange(e: any){ // ipt item值修改
             this.triggerEvent('orderItemChange', e)
         },
-        handleDelectClick(e){
+        handleDelectClick(e: any){ // 删除
             this.triggerEvent('orderItemDelete', e)
         },
-        handleAppendOrder(){
+        handleAppendOrder(){ // 添加
             this.triggerEvent('orderItemAppend')
+        },
+        handleTextAreaChange(e: any){ // 文本域修改
+            this.triggerEvent('textAreaChange', e)
         }
     }
 })

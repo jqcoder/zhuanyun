@@ -32,23 +32,23 @@
 
     <view class="line-ipt">
         <text class="label">Name：</text>
-        <van-field value="{{name }}" required class="ipt" placeholder="Please fill in the recipient's name" border="{{ false }}" bind:change="onChange" data-type="name" />
+        <van-field value="{{name.value }}" required class="ipt" placeholder="Please fill in the recipient's name" border="{{ false }}" error-message="{{name.currentErrMsg}}" bind:blur="onChange" data-type="name" />
     </view>
     <view class="line-ipt">
         <text class="label">Phone：</text>
-        <van-field value="{{phone }}" required class="ipt" placeholder="Please fill in the recipient's phone" border="{{ false }}" bind:change="onChange" data-type="phone"  />
+        <van-field value="{{phone.value }}" required class="ipt" placeholder="Please fill in the recipient's phone" border="{{ false }}" error-message="{{phone.currentErrMsg}}" bind:blur="onChange" data-type="phone"  />
     </view>
     <view class="line-ipt">
         <text class="label">Address：</text>
-        <van-field value="{{address }}" required class="ipt" placeholder="Please fill in the address" border="{{ false }}" bind:change="onChange" data-type="address" />
+        <van-field value="{{address.value }}" required class="ipt" placeholder="Please fill in the address" border="{{ false }}" error-message="{{address.currentErrMsg}}" bind:blur="onChange" data-type="address" />
     </view>
     <view class="line-ipt">
         <text class="label">City：</text>
-        <van-field value="{{city }}" required class="ipt" placeholder="Please fill in the city" border="{{ false }}" bind:change="onChange"  data-type="city"/>
+        <van-field value="{{city.value }}" required class="ipt" placeholder="Please fill in the city" border="{{ false }}" error-message="{{city.currentErrMsg}}" bind:blur="onChange"  data-type="city"/>
     </view>
     <view class="line-ipt">
         <text class="label">PostCode：</text>
-        <van-field value="{{postcode }}" required class="ipt" placeholder="Please fill in the postcode" border="{{ false }}" bind:change="onChange" data-type="postcode" />
+        <van-field value="{{postcode.value }}" required class="ipt" placeholder="Please fill in the postcode" border="{{ false }}" error-message="{{postcode.currentErrMsg}}" bind:blur="onChange" data-type="postcode" />
     </view>
 </view>
 

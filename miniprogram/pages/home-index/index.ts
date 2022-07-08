@@ -3,8 +3,8 @@ const app = getApp<IAppOption>()
 
 Page({
     data: {
-        showRransit: false,
-        transitMethods: {},
+        showRransit: false, // 选择转运模式弹出层
+        transitMethods: {}, // 已经选择的模式
         fromCountry: '中国',
         destination: {
             countryCName: '美国',
@@ -34,6 +34,11 @@ Page({
     onLoad() {
 
     },
+    onUnload(){
+        this.setData({
+            showRransit: false
+        })
+    },
 
     // ==============事件监听
     // 立即转运
@@ -56,7 +61,8 @@ Page({
     handleTransitBtnClick(e: any) {
         let index = e.currentTarget.dataset.index
         this.setData({
-            active: index
+            active: index,
+            transitMethods: this.data.transitInfo[index]
         })
     },
 
@@ -69,11 +75,16 @@ Page({
 
     // 转运下一步
     handleNextStepClick() {
-        let active = this.data.active
-        this.setData({
-            transitMethods: this.data.transitInfo[active]
-        })
+        // 汇集数据存在本地存储
+        // 出发地-目的地-转运模式
+        let orderInfo1  = {
+            begin: this.data.fromCountry,
+            End: this.data.destination,
+            transitMethods: this.data.transitMethods
+        }
+        wx.setStorageSync('orderInfo1',orderInfo1)
 
+        // 跳转到地址填写页
         wx.navigateTo({
             url: `/pages/home-index-writeAddress/index`
         })

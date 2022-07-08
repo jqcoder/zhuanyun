@@ -1,0 +1,54 @@
+<!--components/order-preview-price/index.wxml-->
+<view class="order-preview-price">
+    <view class="line">
+        <text>运费：¥ 138.00</text>
+    </view>
+    <view class="line">
+        <text>附加费：¥ 0.00</text>
+    </view>
+    <view class="line">
+        <text>称重重量：5.6 kg</text>
+    </view>
+    <view class="line">
+        <text>分拣备注：</text>
+        <text class="color">已拆封分拣，统一归类</text>
+    </view>
+    <view class="line">
+        <text>打包备注：</text>
+        <text class="color">东西太多，已统一打包加固</text>
+    </view>
+    <view class="line">
+        <view>称重图片：</view>
+        <scroll-view scroll-x class="scroll-x">
+            <block wx:for="{{4}}" wx:key="*this">
+                <van-image bind:click="handleImageClick" data-index="{{index}}" class="image" width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+            </block>
+        </scroll-view>
+    </view>
+
+    <view class="line">
+        <view>账单：</view>
+        <view class="order-item">
+            <van-image width="192rpx" height="186rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+            <view class="item-info">
+                <view class="info-title">包裹一</view>
+                <view>属性：普通货物</view>
+                <view>长宽高：12*5*5 CM</view>
+                <view>计费重量：1.25KG</view>
+                <view>计费方式：实际重量</view>
+                <view>运费：￥125</view>
+            </view>
+        </view>
+        <view class="order-item">
+            <van-image width="192rpx" height="186rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+            <view class="item-info">
+                <view class="info-title">包裹一</view>
+                <view>属性：普通货物</view>
+                <view>长宽高：12*5*5 CM</view>
+                <view>计费重量：1.25KG</view>
+                <view>计费方式：实际重量</view>
+                <view>运费：￥125</view>
+            </view>
+        </view>
+    </view>
+</view>

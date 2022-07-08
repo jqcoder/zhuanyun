@@ -8,6 +8,12 @@
 
 <scroll-view class="scroll-view" scroll-y>
     <view class="order-container">
-        <order-item order="" bind:copy="handleCopyOrderClick"></order-item>
+        <order-item class="order-item" bind:detailClick="handledetailClick" data-state="1" orderState="1" bind:copy="handleCopyOrderClick"></order-item>
+    </view>
+    <view class="order-container">
+        <order-item class="order-item" bind:detailClick="handledetailClick" data-state="3" orderState="3" bind:copy="handleCopyOrderClick"></order-item>
+    </view>
+    <view class="order-container">
+        <order-item class="order-item" bind:detailClick="handledetailClick" data-state="5" orderState="5" bind:copy="handleCopyOrderClick"></order-item>
     </view>
 </scroll-view>

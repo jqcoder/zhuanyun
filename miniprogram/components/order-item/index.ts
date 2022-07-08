@@ -5,9 +5,9 @@ Component({
             type: Object,
             value: {}
         },
-        orderType: {
-            type: Number,
-            value: 0
+        orderState: {
+            type: String,
+            value: '1'
         }
     },
 
@@ -18,6 +18,9 @@ Component({
     methods: {
         handleCopyClick() {
             this.triggerEvent('copy', this.properties.store)
+        },
+        handleDetailsClick(){
+            this.triggerEvent('detailClick')
         }
     }
 })

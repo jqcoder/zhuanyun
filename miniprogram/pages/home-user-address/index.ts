@@ -78,14 +78,14 @@ Page({
         if(lastPage.route === 'pages/home-index-writeAddress/index'){
             let addressInfo = e.detail
             lastPage.setData({
-                name: addressInfo.name,
-                phone: addressInfo.tel,
-                address: addressInfo.address,
-                postcode: addressInfo.postcode
+                'name.value': addressInfo.name,
+                'phone.value': addressInfo.tel,
+                'address.value': addressInfo.address,
+                'postcode.value': addressInfo.postcode
             })
             wx.navigateBack()
         }else{
-
+            
         }
     }
 

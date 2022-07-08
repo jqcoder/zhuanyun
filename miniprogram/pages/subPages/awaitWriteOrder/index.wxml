@@ -2,26 +2,57 @@
 <view class="page">
     <address-card store="{{store}}" destination="{{destination}}" bind:copy="handleCopyClick"></address-card>
 
-    <order-detail-form number="{{number}}"
+    <block wx:if="{{orderState != 0 && orderState != 1 && orderState != 2}}">
+        <order-preview-price></order-preview-price>
+    </block>
+
+    <order-detail-form  orderState="{{orderState}}"
+                        number="{{number}}"
                         numPlaceholder="{{numPlaceholder}}"
                         bind:numberInputChange="listenNumIptChange"
                         bind:numberInputBlur="listenNumIptBlur" 
                         NumIptDisabled="{{NumIptDisabled}}"
+                        bind:textAreaChange="handleTextAreaChange"
                         textareaPlaceholder="备注信息，例如：去掉包装盒等"
                         orderList="{{orderList}}"
                         bind:orderItemChange="handleIptItemValChange"
                         bind:orderItemDelete="handleDelectClick"
                         bind:orderItemAppend="handleAppendOrder"
-                        allIptDisabled="{{false}}"
                         >
     </order-detail-form>
 
-    <order-card bind:copy="handleCardOrderClick"></order-card>
+<!-- begin出发地 end目的地 method渠道 orderState订单状态 -->
+    <order-card bind:copy="handleCardOrderClick"
+                begin="{{orderMethods.begin}}"
+                end="{{orderMethods.End.countryCName}}"
+                method="{{orderMethods.transitMethods.method}}"
+                orderState="{{orderState}}"
+     ></order-card>
 
-    <view class="operate">
-        <view class="btn customService" bindtap="handleAddOrder">确认订单</view>
-        <view class="btn cancel" bindtap="handleCancelClick">取消订单</view>
-    </view>
+
+    <block wx:if="{{orderState == 0}}">
+        <view class="operate">
+            <view class="btn customService" bindtap="handleAddOrder">确认订单</view>
+            <view class="btn cancel" bindtap="handleCancelClick">取消订单</view>
+        </view>
+    </block>
+    <block wx:if="{{orderState == 1}}">
+        <view class="operate">
+            <view class="btn customService">联系客服</view>
+            <view class="btn cancel"  style="background-color: #274f0c; color: #e6e4af;" bindtap="handleDabaoClick">确认打包</view>
+        </view>
+    </block>
+    <block wx:if="{{orderState == 2}}">
+        <view class="operate">
+            <view class="btn customService">联系客服</view>
+        </view>
+    </block>
+    <block wx:if="{{orderState == 3}}">
+        <view class="operate">
+            <view class="btn customService" style="background-color: #e36a26;">联系客服</view>
+            <view class="btn cancel"  style="background-color: #274f0c; color: #e6e4af;" bindtap="handlePayClick">支付选项</view>
+        </view>
+    </block>
 </view>
 
 

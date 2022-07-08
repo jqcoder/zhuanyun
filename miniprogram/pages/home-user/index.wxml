@@ -10,8 +10,7 @@
 <view class="page">
     <!-- 我的订单 -->
     <view class="my-order">
-        <van-cell title="我的订单" is-link value="全部订单" />
-
+        <van-cell title="我的订单" url="/pages/tabBar/home-order/index" link-type="switchTab" is-link value="全部订单" />
         <view class="order-btnList">
             <view class="btn-item">
                 <van-icon size="56rpx" color="#4399ea" name="../../../../assets/images/user-icon.png" />

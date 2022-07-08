@@ -9,46 +9,39 @@
             <view class="label">
                 <image class="imagetoicon" src="../../assets/images/fanxing.png"></image> 快递个数
             </view>
-            <input type="number" class="ipt" value="{{number ? number : ''}}"  placeholder="{{numPlaceholder}}"
-            bindinput="listenNumIptChange" bindblur="listenNumIptBlur" disabled="{{NumIptDisabled}}"
-             maxlength="3" placeholder-style="font-size: 22rpx;" />
+            <input type="number" class="ipt" value="{{number ? number : ''}}" placeholder="{{numPlaceholder}}" bindinput="listenNumIptChange" bindblur="listenNumIptBlur" disabled="{{NumIptDisabled}}" maxlength="3" placeholder-style="font-size: 22rpx;" />
         </view>
-        <textarea class="textarea" placeholder="{{textareaPlaceholder}}"></textarea>
+        <textarea bindblur="handleTextAreaChange" disabled="{{orderState-0 > 1}}" class="textarea" placeholder="{{textareaPlaceholder}}"></textarea>
     </view>
     <view class="num-list">
         <block wx:if="{{number}}" wx:key="*this">
-            <block wx:if="{{allIptDisabled}}">
-                <block wx:for="{{number}}" wx:key="*this">
-                    <view class="num-item">
-                        <view class="num-label">{{index+1}}. </view>
-                        <input class="ipt" type="number" value="{{orderList[index - 0].value}}" disabled="{{true}}" />
+            <block wx:for="{{number}}" wx:key="*this">
+                <view class="num-item">
+                    <view class="num-label">{{index+1}}. </view>
+                    <!-- <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}" value="{{orderList[index - 0].value}}" disabled="{{orderList[index - 0].disabled}}" placeholder="请输入快递单号" /> -->
+                    <!-- <van-icon class="icon" bind:click="handleDelectClick" data-index="{{index}}" color="#999999" size="36rpx" name="delete-o" /> -->
+
+                    <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}" value="{{orderList[index - 0].value}}" disabled="{{orderList[index - 0].disabled}}" placeholder="请输入快递单号" />
+                    <block wx:if="{{orderState == 0}}">
                         <van-icon class="icon" bind:click="handleDelectClick" data-index="{{index}}" color="#999999" size="36rpx" name="delete-o" />
-                    </view>
-                </block>
-            </block>
-            <block wx:else>
-                <block wx:for="{{number}}" wx:key="*this">
-                    <view class="num-item">
-                        <view class="num-label">{{index+1}}. </view>
-                        <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}" value="{{orderList[index - 0].value}}" disabled="{{orderList[index - 0].disabled}}" placeholder="请输入快递单号" />
-                        <van-icon class="icon" bind:click="handleDelectClick" data-index="{{index}}" color="#999999" size="36rpx" name="delete-o" />
-                    </view>
-                </block>
+                    </block>
+                    <block wx:if="{{orderState > 0}}">
+                        <block wx:if="{{orderList[index].state == 0}}">
+                            <view class="icon dairuku">待入库</view>
+                        </block>
+                        <block wx:if="{{orderList[index].state == 1}}">
+                            <view class="icon dairuku">已入库</view>
+                        </block>
+                    </block>
+                </view>
             </block>
             <view class="addOrder-c">
-                <block wx:if="{{allIptDisabled}}">
-                    <view class="btn">
-                        <van-icon name="plus" />
-                        <text>补充快递单号</text>
-                    </view>
-                </block>
-                <block wx:else>
+                <block wx:if="{{orderState-0 <= 1}}">
                     <view class="btn" bindtap="handleAppendOrder">
                         <van-icon name="plus" />
                         <text>补充快递单号</text>
                     </view>
                 </block>
-                
             </view>
         </block>
     </view>

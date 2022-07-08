@@ -4,7 +4,8 @@
         "van-dialog": "@vant/weapp/dialog/index",
         "address-card": "../../../components/address-card/index",
         "order-card": "../../../components/order-card/index",
-        "order-detail-form": "../../../components/order-detail-form/index"
+        "order-detail-form": "../../../components/order-detail-form/index",
+        "order-preview-price": "../../../components/order-preview-price/index"
     },
     "navigationBarBackgroundColor": "#4E148C",
     "navigationBarTitleText": "订单详情"
