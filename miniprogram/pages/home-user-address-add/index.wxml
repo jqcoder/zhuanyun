@@ -35,3 +35,4 @@
         </view>
     </van-cell>
 </view>
+<van-button type="primary" bind:click="handleUpdateClick" block>确认修改</van-button>

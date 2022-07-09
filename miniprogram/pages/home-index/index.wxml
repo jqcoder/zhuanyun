@@ -1,90 +1,92 @@
 <!--index.wxml-->
-<!-- 页面背景 -->
-<view class="bg-cover"></view>
-<!-- 头部背景 -->
-<view class="bg-header">
-    <view class="round"></view>
-</view>
-
-
-<!-- 待添加logo -->
-<view class="logo-container">
-    用于放置logo的位置
-</view>
-
-<!-- 轮播图 -->
-<swiper class="swiper-list" circular>
-    <swiper-item class="swiper-item">
-        <image class="image" mode="widthFix" src="../../assets/images/home-index/swiper1.png"></image>
-    </swiper-item>
-    <swiper-item class="swiper-item">
-        <image class="image" mode="aspectFill" src="../../assets/images/home-index/swiper2.jpg"></image>
-    </swiper-item>
-</swiper>
-
-<!-- 立即转运 -->
-<view class="transit">
-    <view class="to-from">
-        <view class="to">中国</view>
-        <image class="image" src="../../assets/images/home-index/feiji.png"></image>
-        <view class="from" bindtap="handleSelectCountry">{{destination.countryCName}}</view>
+<scroll-view scroll-y>
+    <!-- 页面背景 -->
+    <view class="bg-cover"></view>
+    <!-- 头部背景 -->
+    <view class="bg-header">
+        <view class="round"></view>
     </view>
-    <view class="button" bindtap="handleGoTransitClick">立即转运</view>
-    <van-popup show="{{ showRransit }}" catchtouchmove="moveHandle" bind:click-overlay="onClickHide">
-        <view class="wrapper" >
-            <view class="transit-methods">
-                <view class="title">预选渠道</view>
-                <view class="btn-list">
-                    <block wx:for="{{transitInfo}}" wx:key="id">
-                        <view bindtap="handleTransitBtnClick" data-index="{{index}}" class="btn {{active === index ? 'btn-active': ''}} ">{{item.method}}</view>
-                    </block>
-                </view>
-                <view class="operate">
-                    <view class="cancel btn" bindtap="onClickHide">取消</view>
-                    <view class="nextStep btn" bindtap="handleNextStepClick">下一步</view>
+
+    <!-- 待添加logo -->
+    <view class="logo-container">
+        用于放置logo的位置
+    </view>
+
+    <!-- 轮播图 -->
+    <swiper class="swiper-list" circular>
+        <swiper-item class="swiper-item">
+            <image class="image" mode="widthFix" src="../../assets/images/home-index/swiper1.png"></image>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+            <image class="image" mode="aspectFill" src="../../assets/images/home-index/swiper2.jpg"></image>
+        </swiper-item>
+    </swiper>
+
+    <!-- 立即转运 -->
+    <view class="transit">
+        <view class="to-from">
+            <view class="to">中国</view>
+            <image class="image" src="../../assets/images/home-index/feiji.png"></image>
+            <view class="from" bindtap="handleSelectCountry">{{destination.countryCName}}</view>
+        </view>
+        <view class="button" bindtap="handleGoTransitClick">立即转运</view>
+        <van-popup show="{{ showRransit }}" catchtouchmove="moveHandle" bind:click-overlay="onClickHide">
+            <view class="wrapper">
+                <view class="transit-methods">
+                    <view class="title">预选渠道</view>
+                    <view class="btn-list">
+                        <block wx:for="{{transitInfo}}" wx:key="id">
+                            <view bindtap="handleTransitBtnClick" data-index="{{index}}" class="btn {{active === index ? 'btn-active': ''}} ">{{item.method}}</view>
+                        </block>
+                    </view>
+                    <view class="operate">
+                        <view class="cancel btn" bindtap="onClickHide">取消</view>
+                        <view class="nextStep btn" bindtap="handleNextStepClick">下一步</view>
+                    </view>
                 </view>
             </view>
-        </view>
-    </van-popup>
-</view>
-
-<!-- 客服 -->
-<view class="custom_service">
-    <image src="../../assets/images/home-index/kefu.png" mode="widthFix" class="image"></image>
-    <view class="text-content">
-        <view class="text-top">联系万兴</view>
-        <view class="text-bottom">为你解决下单疑问？</view>
+        </van-popup>
     </view>
-    <image mode="widthFix" src="../../assets/images/home-index/arrow-right.png" class="arrow-right"></image>
-</view>
 
-<!-- 转运、估算 -->
-<view class="xuzhi-gusuan">
-    <button-big bindtap="handleXuZhiClick" backgroundColor="#4e148c5b" buttonColor="#4E148C" logo="../../assets/images/home-index/car.png">
-        <view slot="title">转运须知</view>
-        <view slot="desc">流程和注意事项</view>
-    </button-big>
-
-    <button-big bindtap="handleGusuanClick" backgroundColor="#ff6600b0" buttonColor="#FF6200" logo="../../assets/images/home-index/jisuanji.png">
-        <view slot="title">运费估算</view>
-        <view slot="desc">费用心中有数</view>
-        <view slot="logo">
-            <image src="../../assets/images/home-index/jisuanji.png" mode="widthFix" class="jisuanji"></image>
+    <!-- 客服 -->
+    <view class="custom_service">
+        <image src="../../assets/images/home-index/kefu.png" mode="widthFix" class="image"></image>
+        <view class="text-content">
+            <view class="text-top">联系万兴</view>
+            <view class="text-bottom">为你解决下单疑问？</view>
         </view>
-    </button-big>
-</view>
-
-<!-- 转运流程 -->
-<view class="liucheng">
-    <view class="title">轻松转运</view>
-    <image mode="widthFix" src="../../assets/images/home-index/liucheng.png" class="image"></image>
-</view>
-
-<!-- 复制地址 -->
-<view class="copy-location">
-    <view class="btn" bindtap="handleCopyLocationClick">
-        <image class="copy" src="../../assets/images/home-index/copy.png" mode="widthFix"></image>
-        <text class="text">复制仓库地址去购物</text>
+        <image mode="widthFix" src="../../assets/images/home-index/arrow-right.png" class="arrow-right"></image>
     </view>
-    <view class="tip">平台的收货地址请填写我们</view>
-</view>
+
+    <!-- 转运、估算 -->
+    <view class="xuzhi-gusuan">
+        <button-big bindtap="handleXuZhiClick" backgroundColor="#4e148c5b" buttonColor="#4E148C" logo="../../assets/images/home-index/car.png">
+            <view slot="title">转运须知</view>
+            <view slot="desc">流程和注意事项</view>
+        </button-big>
+
+        <button-big bindtap="handleGusuanClick" backgroundColor="#ff6600b0" buttonColor="#FF6200" logo="../../assets/images/home-index/jisuanji.png">
+            <view slot="title">运费估算</view>
+            <view slot="desc">费用心中有数</view>
+            <view slot="logo">
+                <image src="../../assets/images/home-index/jisuanji.png" mode="widthFix" class="jisuanji"></image>
+            </view>
+        </button-big>
+    </view>
+
+    <!-- 转运流程 -->
+    <view class="liucheng">
+        <view class="title">轻松转运</view>
+        <image mode="widthFix" src="../../assets/images/home-index/liucheng.png" class="image"></image>
+    </view>
+
+    <!-- 复制地址 -->
+    <view class="copy-location">
+        <view class="btn" bindtap="handleCopyLocationClick">
+            <image class="copy" src="../../assets/images/home-index/copy.png" mode="widthFix"></image>
+            <text class="text">复制仓库地址去购物</text>
+        </view>
+        <view class="tip">平台的收货地址请填写我们</view>
+    </view>
+
+</scroll-view>

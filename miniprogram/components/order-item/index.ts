@@ -12,7 +12,6 @@ Component({
     },
 
     data: {
-
     },
 
     methods: {

@@ -7,8 +7,9 @@
             <view>保价</view>
         </view>
         <view class="ipt-container">
-            <input type="text" class="ipt" placeholder="自定义物品价格，请填写真实物品价格" />
+            <input type="text" class="ipt" bindchange="iptValChange" value="{{iptValue}}" placeholder="自定义物品价格，请填写真实物品价格" />
         </view>
+        <view class="errtip">{{errmsg}}</view>
     </view>
 
     <view class="diushi decorate">
@@ -20,7 +21,7 @@
 
         <view class="isopen">
             <view>丢失险（保价的3%）</view>
-            <van-switch class="switch" active-color="#1fde6a" size="24px" checked="{{ diushiChecked }}" bind:change="onChange" />
+            <van-switch class="switch" active-color="#1fde6a" size="24px"  checked="{{ diushiChecked }}" bind:change="onDiushiChange" />
         </view>
         <view class="diushi-price">保险费：¥ 30.00</view>
     </view>
@@ -35,8 +36,8 @@
         </view>
 
         <view class="isopen">
-            <view>丢失险（保价的3%）</view>
-            <van-switch class="switch" active-color="#1fde6a" size="24px" checked="{{ diushiChecked }}" bind:change="onChange" />
+            <view>关税险（保价的3%）</view>
+            <van-switch class="switch" active-color="#1fde6a" size="24px" checked="{{ guanshuiChecked }}" bind:change="onGuanshuiChange" />
         </view>
         <view class="diushi-price">保险费：¥ 30.00</view>
     </view>

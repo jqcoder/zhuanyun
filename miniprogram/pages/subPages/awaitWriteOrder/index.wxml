@@ -1,4 +1,11 @@
 <!--pages/subPages/awaitWriteOrder/index.wxml-->
+<block wx:if="{{orderState == 1 || orderState == 2}}">
+    <order-detail-tip text="您的快递包裹已全部到达仓库，请及时确认捡货打包。" bgc="#b39acd"></order-detail-tip>
+</block>
+<block wx:if="{{orderState == 3}}">
+    <order-detail-tip text="转运账单已生成，请及时查看账单信息并支付" bgc="#b39acd"></order-detail-tip>
+</block>
+
 <view class="page">
     <address-card store="{{store}}" destination="{{destination}}" bind:copy="handleCopyClick"></address-card>
 

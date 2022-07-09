@@ -1,5 +1,7 @@
 {
-    "usingComponents": {},
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index"
+    },
     "navigationBarBackgroundColor": "#df6b2d",
     "navigationBarTitleText": "万兴转运"
 }   

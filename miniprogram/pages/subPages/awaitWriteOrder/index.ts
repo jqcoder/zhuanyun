@@ -4,6 +4,7 @@ import Dialog from '../../../miniprogram_npm/@vant/weapp/dialog/dialog';
 Page({
     data: {
         orderState: 0,
+        handleLock: false, // 操作锁  
 
         store: {
             name: '新希望仓库',
@@ -25,7 +26,7 @@ Page({
             number: 0
         },
         NumIptDisabled: false, // 禁用个数输入框
-        
+
         orderList: [
             // {disabled: false,value: 1},
             // {disabled: false,value: 2}
@@ -37,8 +38,8 @@ Page({
         state0Setdata: {
             NumIptDisabled: true
         },
-        monilist1: [{num: '111',state: 0},{num: '222',state: 1}],
-        monilist2: [{num: '111',state: 1},{num: '222',state: 1}]
+        monilist1: [{ num: '111', state: 0 }, { num: '222', state: 1 }],
+        monilist2: [{ num: '11133', state: 1 }, { num: '222', state: 1 }]
     },
 
     onLoad(options: any) {
@@ -53,19 +54,19 @@ Page({
             orderState: options?.orderState
         })
 
-        if(options?.orderState === '0'){
+        if (options?.orderState === '0') {
             this.state0()
-        }else if(options?.orderState === '1'){
+        } else if (options?.orderState === '1') {
             this.state1()
-        }else if(options?.orderState === '2'){
+        } else if (options?.orderState === '2') {
             this.state2()
-        }else if(options?.orderState === '3'){
+        } else if (options?.orderState === '3') {
             this.state3()
         }
     },
 
     // 状态0
-    state0(){
+    state0() {
         // 获取本地存储的数据并且回显
         let addressInfo = wx.getStorageSync('orderInfo2')
         let orderMethods = wx.getStorageSync('orderInfo1')
@@ -79,7 +80,7 @@ Page({
     },
 
     // 状态1 待入仓等待快递-未打包
-    state1(){
+    state1() {
         // 模拟网络请求获取订单数据
         this.state0()
         // 获取状态1该设置的属性 => 快递个数禁用
@@ -87,23 +88,23 @@ Page({
 
         // 根据获取到的快递单号列表 创建不可修改ipt
         // 模拟
-        this.setData({number: 2}) // 到时候改为快递单号length
+        this.setData({ number: 2 }) // 到时候改为快递单号length
         this.createIptItem(2, true, this.data.monilist1)
     },
 
     // 状态2
-    state2(){
+    state2() {
         // 模拟网络请求获取订单数据
         this.state0()
         this.setData(this.data.state0Setdata) // 快递个数禁用 并且文本域禁用（在组件写了）
-        this.setData({number: 2}) // 到时候改为快递单号length
+        this.setData({ number: 2 }) // 到时候改为快递单号length
         this.createIptItem(2, true, this.data.monilist2)
     },
-    state3(){
+    state3() {
         // 模拟网络请求获取订单数据
         this.state0()
         this.setData(this.data.state0Setdata) // 快递个数禁用 并且文本域禁用
-        this.setData({number: 2}) // 到时候改为快递单号length
+        this.setData({ number: 2 }) // 到时候改为快递单号length
         this.createIptItem(2, true, this.data.monilist2)
     },
 
@@ -157,16 +158,16 @@ Page({
     },
 
     // 创建输入框arr item
-    createIptItem(num: number,iptDisabled: boolean = false,list: any = false) {
+    createIptItem(num: number, iptDisabled: boolean = false, list: any = false) {
         // num 个数  iptDisabled每个的ipt是否禁用 list每个ipt对应的单号默认未kong
         for (let i = 0; i < num; i++) {
-            if(list){
+            if (list) {
                 this.data.orderList.push({
                     disabled: iptDisabled,
                     value: list[i].num,
                     state: list[i].state
                 })
-            }else{
+            } else {
                 this.data.orderList.push({
                     disabled: iptDisabled,
                     value: '',
@@ -179,29 +180,28 @@ Page({
     },
 
     // 监听输入框列表值的修改
-    handleIptItemValChange(e) {
+    handleIptItemValChange(e: any) {
         let keyWord = e.detail.detail.value
         let index = e.detail.currentTarget.dataset.index
         let keyword = e.detail.detail.value
-        console.log(keyword);
-        
-        wx.showModal({
-            title: '请确认快递单号是否无误',
-            showCancel: true,
-            success: (res) => {
-                if (res.confirm && !!keyword) {
-                    this.setData({
-                        [`orderList[${index}].value`]: keyWord,
-                        [`orderList[${index}].disabled`]: true
-                    })
+        if (keyword) {
+            wx.showModal({
+                title: '请确认快递单号是否无误',
+                showCancel: true,
+                success: (res) => {
+                    if (res.confirm && !!keyword) {
+                        this.setData({
+                            [`orderList[${index}].value`]: keyWord,
+                            [`orderList[${index}].disabled`]: true
+                        })
+                    }
                 }
-            }
-        })
-
+            })
+        }
     },
 
     // 监听删除点击
-    handleDelectClick(e) {
+    handleDelectClick(e: any) {
         Dialog.confirm({
             title: '删除',
             message: '确认删除此订单吗',
@@ -225,6 +225,8 @@ Page({
             }
         }).catch(() => {
         });
+        console.log(123);
+        
     },
 
     // 追加订单个数
@@ -258,7 +260,7 @@ Page({
     },
 
     // 文本域
-    handleTextAreaChange(e: any){
+    handleTextAreaChange(e: any) {
         this.setData({
             textArea: e.detail.detail.value
         })
@@ -284,27 +286,27 @@ Page({
             // })
             wx.switchTab({
                 url: '/pages/tabBar/home-order/index',
-           })
+            })
         }).catch(() => { })
     },
 
     //确认打包
-    handleDabaoClick(){
+    handleDabaoClick() {
         let isOk = true
-        this.data.monilist1.forEach((item=>{
-            if(!item.state){
+        this.data.monilist1.forEach((item => {
+            if (!item.state) {
                 isOk = false
             }
         }))
-        if(isOk){
+        if (isOk) {
             console.log('确认打包');
-        }else{
+        } else {
             console.log('不能打包');
         }
     },
 
     // 支付
-    handlePayClick(){
+    handlePayClick() {
         // 开启询问,确认无误后就跳转
         wx.navigateTo({
             url: "/pages/subPages/order-insure/index"

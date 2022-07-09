@@ -20,7 +20,8 @@
         "pages/subPages/order-detail/index",
         "pages/subPages/order-insure/index",
         "pages/subPages/order-pay-detail/index",
-        "pages/subPages/order-all/index"
+        "pages/subPages/order-all/index",
+        "pages/subPages/paysuccess/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

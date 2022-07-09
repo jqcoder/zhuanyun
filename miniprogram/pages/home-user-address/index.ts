@@ -62,20 +62,32 @@ Page({
 
     },
 
+    // 删除地址
     listenDeleteClick(e: any) {
         let addressId = e.detail
         Dialog.confirm({
             message: '确认删除改地址吗？',
         }).then((res) => {
-            console.log(e);
-        }).catch((err: any) => { })
+            console.log(res);
+        }).catch((err: any) => {
+            console.log(err);
+
+        })
     },
 
-    handleInfoclick(e: any){
-        let lastPage = getCurrentPages()[getCurrentPages().length-2]
-        
+    // 修改地址
+    handleChangeAddress(e: any) {
+        let str = JSON.stringify(this.data.addressList[e.detail])
+        wx.navigateTo({
+            url: `/pages/home-user-address-add/index?address=${str}`
+        })
+    },
+
+    handleInfoclick(e: any) {
+        let lastPage = getCurrentPages()[getCurrentPages().length - 2]
+
         // 判断上一层一面是哪个
-        if(lastPage.route === 'pages/home-index-writeAddress/index'){
+        if (lastPage.route === 'pages/home-index-writeAddress/index') {
             let addressInfo = e.detail
             lastPage.setData({
                 'name.value': addressInfo.name,
@@ -84,8 +96,9 @@ Page({
                 'postcode.value': addressInfo.postcode
             })
             wx.navigateBack()
-        }else{
-            
+        } else {
+            console.log('查看地址详情');
+
         }
     }
 

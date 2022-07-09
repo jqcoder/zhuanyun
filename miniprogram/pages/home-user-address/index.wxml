@@ -11,7 +11,8 @@
                         addressInfo="{{item}}"
                         bind:InfoClick="handleInfoclick"
                         bind:setDefaultAddress="listenSetDefaultClick"
-                        bind:deleteAddress="listenDeleteClick">
+                        bind:deleteAddress="listenDeleteClick"
+                        bind:ChangeAddress="handleChangeAddress">
             </address-item>
         </block>
     </view>

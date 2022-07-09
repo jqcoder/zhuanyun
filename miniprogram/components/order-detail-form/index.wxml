@@ -14,15 +14,15 @@
         <textarea bindblur="handleTextAreaChange" disabled="{{orderState-0 > 1}}" class="textarea" placeholder="{{textareaPlaceholder}}"></textarea>
     </view>
     <view class="num-list">
-        <block wx:if="{{number}}" wx:key="*this">
+        <block wx:if="{{number}}">
             <block wx:for="{{number}}" wx:key="*this">
                 <view class="num-item">
                     <view class="num-label">{{index+1}}. </view>
                     <!-- <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}" value="{{orderList[index - 0].value}}" disabled="{{orderList[index - 0].disabled}}" placeholder="请输入快递单号" /> -->
                     <!-- <van-icon class="icon" bind:click="handleDelectClick" data-index="{{index}}" color="#999999" size="36rpx" name="delete-o" /> -->
 
-                    <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}" value="{{orderList[index - 0].value}}" disabled="{{orderList[index - 0].disabled}}" placeholder="请输入快递单号" />
-                    <block wx:if="{{orderState == 0}}">
+                    <input class="ipt" type="number" bindchange="handleIptItemValChange" data-index="{{index}}" value="{{orderList[index - 0].value}}" disabled="{{orderList[index - 0].disabled || disablede}}" placeholder="请输入快递单号" />
+                    <block wx:if="{{orderState == 0 || (!orderList[index].state && orderList[index].state!= 0 ) }}">
                         <van-icon class="icon" bind:click="handleDelectClick" data-index="{{index}}" color="#999999" size="36rpx" name="delete-o" />
                     </block>
                     <block wx:if="{{orderState > 0}}">
@@ -32,6 +32,9 @@
                         <block wx:if="{{orderList[index].state == 1}}">
                             <view class="icon dairuku">已入库</view>
                         </block>
+                    </block>
+                    <block wx:if="{{orderState >= 3}}">
+                        <view class="kg" style="left: {{90 + (18 * orderList[index - 0].value.length)}}rpx;">1.28kg</view>
                     </block>
                 </view>
             </block>

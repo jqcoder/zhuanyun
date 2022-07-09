@@ -13,7 +13,6 @@ Component({
             value: {}
         }
     },
-
     data: {
         id: 0
     },
@@ -35,6 +34,9 @@ Component({
         },
         handleDeleteClick(e: any) {
             that.triggerEvent('deleteAddress', e.currentTarget.dataset.id)
+        },
+        handleChangeClick(e: any){
+            that.triggerEvent('ChangeAddress', e.currentTarget.dataset.id)
         }
     }
 })

@@ -5,7 +5,8 @@
         "address-card": "../../../components/address-card/index",
         "order-card": "../../../components/order-card/index",
         "order-detail-form": "../../../components/order-detail-form/index",
-        "order-preview-price": "../../../components/order-preview-price/index"
+        "order-preview-price": "../../../components/order-preview-price/index",
+        "order-detail-tip": "../../../components/order-detail-tip/index"
     },
     "navigationBarBackgroundColor": "#4E148C",
     "navigationBarTitleText": "订单详情"

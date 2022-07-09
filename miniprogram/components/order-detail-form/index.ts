@@ -28,7 +28,7 @@ Component({
     },
 
     data: {
-
+        disablede: false
     },
 
     methods: {

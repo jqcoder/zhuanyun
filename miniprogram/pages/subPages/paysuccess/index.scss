@@ -1,0 +1,33 @@
+/* pages/subPages/paysuccess/index.wxss */
+.pay-container {
+    text-align: center;
+    padding-top: 200rpx;
+
+    .content {
+        color: #14b71e;
+
+        .image {
+            width: 142rpx;
+            height: 140rpx;
+        }
+    }
+
+    .text {
+        display: inline-block;
+        margin-top: 50rpx;
+        font-size: 28rpx;
+        padding: 0 50rpx;
+    }
+
+    .over {
+        width: 378rpx;
+        height: 84rpx;
+        border: 1px solid rgba(6, 161, 3, 100);
+        text-align: center;
+        line-height: 84rpx;
+        margin: 50rpx auto;
+        color: #14a11b;
+        border-radius: 10rpx;
+    }
+
+}

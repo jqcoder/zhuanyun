@@ -41,7 +41,9 @@ Page({
     // 去支付
     handleGoPayClick(){
         if(this.data.checked){
-            console.log('立即支付');
+            wx.navigateTo({
+                url: '/pages/subPages/paysuccess/index'
+            })
         }else{
             wx.showToast({
                 title: '请先同意协议',

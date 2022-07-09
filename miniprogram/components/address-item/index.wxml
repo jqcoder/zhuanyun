@@ -30,7 +30,7 @@
             </view>
         </block>
         <view class="right">
-            <van-icon color="#b2b2b2" size="38rpx" name="edit" />
+            <van-icon color="#b2b2b2" bind:click="handleChangeClick" data-id="{{addressInfo.id}}" size="38rpx" name="edit" />
             <van-icon bind:click="handleDeleteClick" data-id="{{addressInfo.id}}" color="#b2b2b2" size="38rpx" name="delete-o" />
         </view>
     </view>

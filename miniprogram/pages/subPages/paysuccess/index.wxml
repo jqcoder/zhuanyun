@@ -1,0 +1,13 @@
+<!--pages/subPages/paysuccess/index.wxml-->
+<view class="pay-container">
+    <view class="content">
+        <image class="image" src="../../../assets/images/paysuccess.png" mode="widthFix"></image>
+        <view class="successText">支付成功</view>
+    </view>
+    <view class="text">
+        橙子会在24小时内为您发货，并推送信息给您，
+请您耐心等待，3秒钟后为您跳转
+    </view>
+    
+    <view class="over" bindtap="handleOverClick">完成</view>
+</view>

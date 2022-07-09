@@ -9,7 +9,7 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "填写",
+                    "name": "填写订单",
                     "pathName": "pages/subPages/awaitWriteOrder/index",
                     "query": "orderState=0",
                     "launchMode": "default",
@@ -33,6 +33,20 @@
                     "name": "拣货",
                     "pathName": "pages/subPages/awaitWriteOrder/index",
                     "query": "orderState=2",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "订单支付",
+                    "pathName": "pages/subPages/order-pay-detail/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/home-user-address/index",
+                    "query": "",
                     "launchMode": "default",
                     "scene": null
                 }
